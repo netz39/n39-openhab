@@ -3,13 +3,11 @@ Group Lobby (All)
 Group Wetter (All)
 Group Gatekeeper "Gatekeeper MQTT" <lock>
 
-
+Contact Door  "Eingangstür [%s]" <door> (Gatekeeper)
+Contact Doorlock  "Eingangstür Schloss [%s]" <lock> (Gatekeeper)
 
 String DoorEvent "Door/Events [%s]" (Gatekeeper) {mqtt="<[helium:Netz39/Things/Door/Events:state:default]"}
 String Ampel "Ampel [%s]" (Gatekeeper) {mqtt="<[helium:Netz39/Things/Ampel/Events:state:default]"}
 String AmpelEvent "AmpelEvent [%s]" (Gatekeeper) {mqtt="<[helium:Netz39/Things/Ampel/Light/Events:state:default]"}
-
-Contact Door  "Eingangstür [%s]" <door> (Gatekeeper)
-Contact Doorlock  "Eingangstür Schloss [%s]" <lock> (Gatekeeper)
 
 Switch SpaceStatus "N39 SpaceStatus [%s]"	<switch>	{mqtt="<[helium:Netz39/SpaceAPI/isOpen:state:MAP(SpaceAPI.map)]", http=">[ON:POST:http://wittgenstein/open] >[OFF:POST:http://wittgenstein/close]"}
