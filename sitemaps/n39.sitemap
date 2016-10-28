@@ -1,0 +1,10 @@
+sitemap demo label="N39 openhab" {
+    Frame label="Schließanlage" {
+        Text item=Door
+        Text item=Doorlock
+        Group item=Gatekeeper
+    }
+    Frame label="SpaceStatus"{
+      Switch item=SpaceStatus
+    }
+}

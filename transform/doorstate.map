@@ -1,0 +1,6 @@
+door\ locked=closed
+door\ unlocked=closed
+door\ closed=closed
+door\ open=opened
+UNDEFINED=unknown
+-=unknown

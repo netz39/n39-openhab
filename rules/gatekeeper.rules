@@ -1,0 +1,17 @@
+rule "Door opened"
+when
+	Item DoorState changed
+then
+	if(DoorState.state=="door open") {
+		postUpdate(Door, OPEN)
+	}
+	else if(DoorState.state=="door closed") {
+		postUpdate(Door, CLOSED)
+	}
+	else if(DoorState.state=="door unlocked") {
+		postUpdate(Doorlock, OPEN)
+	}
+	else if(DoorState.state=="door locked") {
+		postUpdate(Doorlock, CLOSED)
+	}
+end

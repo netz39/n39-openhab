@@ -1,0 +1,24 @@
+import org.openhab.core.library.types.*
+import java.util.Date
+import java.text.SimpleDateFormat
+
+
+rule "N39 opened"
+when
+	Item SpaceStatus changed from OFF to ON
+then
+	var SimpleDateFormat df = new SimpleDateFormat( "YYYY-MM-dd HH:mm" )
+	var String Timestamp = df.format( new Date() )
+	logInfo("SpaceStatus", "N39 wurde geöffnet!")
+	sendTweet('#Spacetime im @netz39! ('+Timestamp+')')
+end
+
+rule "N39 closed"
+when
+	Item SpaceStatus changed from ON to OFF
+then
+	var SimpleDateFormat df = new SimpleDateFormat( "YYYY-MM-dd HH:mm" )
+	var String Timestamp = df.format( new Date() )
+	logInfo("SpaceStatus", "N39 wurde geschlossen!")
+	sendTweet('Das @netz39 beendet die #Spacetime! ('+Timestamp+')')
+end
