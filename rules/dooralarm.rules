@@ -1,14 +1,29 @@
 var Timer timer
 
-rule "Door Alarm"
+rule "Tur oeffnen"
 when
   Item Door changed from CLOSED to OPEN
 then
-  //Setze Mode auf Blinken und Blinkgeschwindigkeit auf 2
-  sendCommand( Logouhr_RGBmode, 2 )
-  sendCommand( Logouhr_RGBspd, 2 )
-  // 4 Sekunden blinken, danach wieder abstellen
-  timer = createTimer(now.plusSeconds(4)) [|
-    sendCommand( Logouhr_RGBmode, 0)
-  ]
+  if(SpaceStatus.state == OFF && Logouhr_ON.state == OFF){
+    sendCommand( Logouhr_R, 100 )
+  }
+  else{
+    //Setze Mode auf Blinken und Blinkgeschwindigkeit auf 2
+    sendCommand( Logouhr_RGBmode, 2 )
+    sendCommand( Logouhr_RGBspd, 2 )
+    // 4 Sekunden blinken, danach wieder abstellen
+    timer = createTimer(now.plusSeconds(4)) [|
+      sendCommand( Logouhr_RGBmode, 0)
+      sendCommand( Logouhr_RGBspd, 42 )
+    ]
+  }
+end
+
+rule "Tuer geschlossen"
+when
+  Item Door changed from OPEN to CLOSED
+then
+  if(SpaceStatus.state == OFF){
+    sendCommand( Logouhr_ON, OFF)
+  }
 end
