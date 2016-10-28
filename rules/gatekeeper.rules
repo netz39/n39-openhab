@@ -1,17 +1,18 @@
 rule "Door opened"
 when
-	Item DoorState changed
+	Item DoorEvent changed
 then
-	if(DoorState.state=="door open") {
+	//This Script transforms the Gatekeeper Events into 2 States
+	if(DoorEvent.state=="door open") {
 		postUpdate(Door, OPEN)
 	}
-	else if(DoorState.state=="door closed") {
+	else if(DoorEvent.state=="door closed") {
 		postUpdate(Door, CLOSED)
 	}
-	else if(DoorState.state=="door unlocked") {
+	else if(DoorEvent.state=="door unlocked") {
 		postUpdate(Doorlock, OPEN)
 	}
-	else if(DoorState.state=="door locked") {
+	else if(DoorEvent.state=="door locked") {
 		postUpdate(Doorlock, CLOSED)
 	}
 end
