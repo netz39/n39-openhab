@@ -1,0 +1,14 @@
+var Timer timer
+
+rule "Door Alarm"
+when
+  Item Door changed from CLOSED to OPEN
+then
+  //Setze Mode auf Blinken und Blinkgeschwindigkeit auf 2
+  sendCommand( Logouhr_RGBmode, 2 )
+  sendCommand( Logouhr_RGBspd, 2 )
+  // 4 Sekunden blinken, danach wieder abstellen
+  timer = createTimer(now.plusSeconds(4)) [|
+    sendCommand( Logouhr_RGBmode, 0)
+  ]
+end
