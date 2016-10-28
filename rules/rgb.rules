@@ -5,7 +5,7 @@ var String  blueValue
 
 rule "Logouhr Set RGB"
 when
-        Item Logouhr_RGB changed
+        Item Logouhr_RGB received update
 then
         hsbValue = Logouhr_RGB.state as HSBType
 
@@ -27,7 +27,7 @@ end
 
 rule "Logouhr RGB ON"
 when
-        Item Logouhr_ON changed
+        Item Logouhr_ON received update
 then
 	if(Logouhr_ON.state == ON){
         hsbValue = Logouhr_RGB.state as HSBType
