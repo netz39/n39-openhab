@@ -1,0 +1,48 @@
+var HSBType hsbValue
+var String  redValue
+var String  greenValue
+var String  blueValue
+
+rule "Logouhr Set RGB"
+when
+        Item Logouhr_RGB changed
+then
+        hsbValue = Logouhr_RGB.state as HSBType
+
+        redValue   = hsbValue.red.intValue.toString
+        greenValue = hsbValue.green.intValue.toString
+        blueValue  = hsbValue.blue.intValue.toString
+
+	if(Logouhr_ON.state == ON){
+        sendCommand( Logouhr_R, redValue )
+        sendCommand( Logouhr_G, greenValue)
+        sendCommand( Logouhr_B, blueValue )
+	}
+	else{
+        sendCommand( Logouhr_R, 0 )
+        sendCommand( Logouhr_G, 0 )
+        sendCommand( Logouhr_B, 0 )
+    }
+end
+
+rule "Logouhr RGB ON"
+when
+        Item Logouhr_ON changed
+then
+	if(Logouhr_ON.state == ON){
+        hsbValue = Logouhr_RGB.state as HSBType
+
+        redValue   = hsbValue.red.intValue.toString
+        greenValue = hsbValue.green.intValue.toString
+        blueValue  = hsbValue.blue.intValue.toString
+
+        sendCommand( Logouhr_R, redValue )
+        sendCommand( Logouhr_G, greenValue)
+        sendCommand( Logouhr_B, blueValue )
+    }
+    else{
+        sendCommand( Logouhr_R, 0 )
+        sendCommand( Logouhr_G, 0 )
+        sendCommand( Logouhr_B, 0 )
+    }
+end
