@@ -1,10 +1,21 @@
 sitemap demo label="N39 openhab" {
-    Frame label="Schließanlage" {
-        Text item=Door
-        Text item=Doorlock
-        Group item=Gatekeeper
+    Frame label="Lobby" {
+      Switch item=Logouhr_ON
+      Colorpicker item=Logouhr_RGB
+      Text item=Door
+      Text item=Doorlock
+    }
+    Frame label="Hackerstube"{
+      Text label="Nichts zu steuern"
+    }
+    Frame label="Werkstatt"{
+      Text label="Nichts zu steuern"
     }
     Frame label="SpaceStatus"{
       Switch item=SpaceStatus
+    }
+    Frame label="MQTT" {
+        Group item=Gatekeeper
+        Group item=LogouhrESP
     }
 }
