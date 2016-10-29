@@ -2,48 +2,22 @@ import org.openhab.core.library.types.*
 import java.util.Date
 import java.text.SimpleDateFormat
 
-rule "N39 opened"
+rule "Twitter N39 opened"
 when
 	Item SpaceStatus changed from OFF to ON
 then
 	var SimpleDateFormat df = new SimpleDateFormat( "YYYY-MM-dd HH:mm" )
 	var String Timestamp = df.format( new Date() )
 	logInfo("SpaceStatus", "N39 wurde geöffnet!")
-	sendTweet('#Spacetime im @netz39! ('+Timestamp+')')
-
-	logInfo("SpaceStatus", "Schalte Logouhr auf blinkend grün")
-
-	sendCommand( Logouhr_R, 30 )
-  sendCommand( Logouhr_G, 90 )
-  sendCommand( Logouhr_B, 0 )
-	sendCommand( Logouhr_RGBspd, 2 )
-	sendCommand( Logouhr_RGBmode, 2)
-	timer = createTimer(now.plusSeconds(10)) [|
-		sendCommand( Logouhr_RGBspd, 42 )
-    sendCommand( Logouhr_RGBmode, 0)
-		//Schalte Logouhr an mit hinterlegtem Farbwert
-		sendCommand( Logouhr_ON, ON)
-  ]
+	sendTweet('#Spacetime im @netz39! ('+Timestamp+'UTC)')
 end
 
-rule "N39 closed"
+rule "Twitter N39 closed"
 when
 	Item SpaceStatus changed from ON to OFF
 then
 	var SimpleDateFormat df = new SimpleDateFormat( "YYYY-MM-dd HH:mm" )
 	var String Timestamp = df.format( new Date() )
 	logInfo("SpaceStatus", "N39 wurde geschlossen!")
-	sendTweet('Das @netz39 beendet die #Spacetime! ('+Timestamp+')')
-
-	sendCommand( Logouhr_R, 100 )
-  sendCommand( Logouhr_G, 0 )
-  sendCommand( Logouhr_B, 0 )
-	sendCommand( Logouhr_RGBmode, 2)
-	timer = createTimer(now.plusSeconds(10)) [|
-		// Schalte wieder auf Langsames Dimmen
-		sendCommand( Logouhr_RGBspd, 42 )
-		sendCommand( Logouhr_RGBmode, 0)
-		//TODO: Ausschalten nach ein paar Minuten
-    sendCommand( Logouhr_ON, OFF)
-  ]
+	sendTweet('Das @netz39 beendet die #Spacetime! ('+Timestamp+'UTC)')
 end

@@ -1,11 +1,32 @@
 var Timer timer
 
+rule "N39 closed"
+when
+	Item SpaceStatus changed from ON to OFF
+then
+	sendCommand( Logouhr_R, 100 )
+  sendCommand( Logouhr_G, 0 )
+  sendCommand( Logouhr_B, 0 )
+	sendCommand( Logouhr_RGBmode, 2)
+	timer = createTimer(now.plusSeconds(30)) [|
+		// Schalte wieder auf Langsames Dimmen
+		sendCommand( Logouhr_RGBspd, 42 )
+		sendCommand( Logouhr_RGBmode, 0)
+		//TODO: Ausschalten nach ein paar Minuten
+    sendCommand( Logouhr_ON, OFF)
+  ]
+end
+
 rule "Tur oeffnen"
 when
   Item Door changed from CLOSED to OPEN
 then
-  if(SpaceStatus.state == OFF && Logouhr_ON.state == OFF){
+  if(SpaceStatus.state == OFF){
+    sendCommand( Logouhr_RGBmode, 0)
+    sendCommand( Logouhr_RGBspd, 42 )
     sendCommand( Logouhr_R, 100 )
+    sendCommand( Logouhr_G, 0 )
+    sendCommand( Logouhr_B, 0 )
   }
   else{
     //Setze Mode auf Blinken und Blinkgeschwindigkeit auf 2
