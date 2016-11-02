@@ -17,7 +17,7 @@ Aktoren und Sensorwerte werden in openhab als Items im Items-Ordner abgelegt.
 Diese Zeile erstellt einen Switch mit dem Identifier `SpaceStatus`, der Beschreibung `"N39 SpaceStatus"` und einem `<switch>`-Icon.
 
 Über das mqtt Binding wird von helium der Wert von `Netz39/SpaceAPI/isOpen` abonniert. Die spitze Klammer gibt dabei die Lese-/Schreibrichtung an (`<` Empfangen, `>` Senden).      
-Ein Switch ist ein Schalter in der mit den Zuständen: `ON` und `OFF`. Daher muss das in MQTT gepublish-te true and false noch umgemapped werden. Dies erfolgt mit dem MAP Bundle und einer Datei im *transform* Ordner:
+Ein Switch ist ein Schalter mit den Zuständen: `ON` und `OFF`. Daher muss das in MQTT gepublish-te true and false noch umgemapped werden. Dies erfolgt mit dem MAP Bundle und einer Datei im *transform* Ordner:
 
 Inhalt *transform/SpaceAPI.map*:
 
