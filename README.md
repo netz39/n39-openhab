@@ -4,9 +4,13 @@ Dieses Repository beingaltet den "conf"-Ordner des openhab-Spiel-Test-Bastelknot
 ## Bedienoberfläche
 Endnutzer können im Netz39-WLAN können auf openhab über die Basic-UI zugreifen: (http://odroid64.n39.eu:8080/) 
 
-## Selbst entwickeln
+## Mach mit! Einfache Konfiguration auch für Noobs!
 ### Items erstellen
-Aktoren und Sensorwerte werden in openhab als Items im Items-Ordner abgelegt.
+Aktoren und Sensorwerte werden in openhab als [Items](https://github.com/openhab/openhab/wiki/Explanation-of-items) im items-Ordner abgelegt.
+### Sitemaps
+Sitemaps beschreiben die Anordnung der Items und Elemente in der UI.
+### Rules
+Rules bezeichnen Schaltregeln, die durch gewisse Ereignisse ausgelöst werden.
 
 ### Beispiele
 #### Spacestatus Switch
