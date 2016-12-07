@@ -9,7 +9,7 @@ then
 	var SimpleDateFormat df = new SimpleDateFormat( "YYYY-MM-dd HH:mm" )
 	var String Timestamp = df.format( new Date() )
 	logInfo("SpaceStatus", "N39 wurde geöffnet!")
-	sendTweet('#Spacetime im @netz39! ('+Timestamp+'UTC)')
+	sendTweet('#Spacetime im @netz39! ('+Timestamp+')')
 end
 
 rule "Twitter N39 closed"
@@ -19,5 +19,5 @@ then
 	var SimpleDateFormat df = new SimpleDateFormat( "YYYY-MM-dd HH:mm" )
 	var String Timestamp = df.format( new Date() )
 	logInfo("SpaceStatus", "N39 wurde geschlossen!")
-	sendTweet('Das @netz39 beendet die #Spacetime! ('+Timestamp+'UTC)')
+	sendTweet('Das @netz39 beendet die #Spacetime! ('+Timestamp+')')
 end
