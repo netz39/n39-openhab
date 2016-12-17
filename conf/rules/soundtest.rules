@@ -1,4 +1,4 @@
-rule "Test"
+rule "Soundtest"
 when
 	Item Stereo_Hauptschalter changed
 then
