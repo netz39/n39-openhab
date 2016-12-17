@@ -2,5 +2,5 @@ rule "Soundtest"
 when
 	Item Stereo_Hauptschalter changed from OFF to ON
 then
-	say("Test 1 2 3 4 5 6 7 8 9. super!")
+	playStream("http://www.deutschlandradio.de/streaming/dlf_lq_mp3.m3u")
 end
