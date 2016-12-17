@@ -1,5 +1,7 @@
 sitemap n39 label="N39 openhab" {
     Frame label="Lobby" {
+      Default item=Music
+      Slider item=Volume icon=soundvolume
       Switch item=Logouhr_ON
       Colorpicker item=Logouhr_RGB
       Text item=Door

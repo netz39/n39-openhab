@@ -1,4 +1,8 @@
 Group Lobby (All)
 Group Media (Lobby)
+Group CC "Chromecast" (Media)
 
 Switch Stereo_Hauptschalter "Stereo - Hauptschalter" (Media) {mqtt=">[helium:Netz39/Things/Stereo/Relais1/CMD:command:*:default]"}
+
+Dimmer Volume (Media, CC) { channel="chromecast:audio:myCC:volume" }
+Player Music (Media, CC) { channel="chromecast:audio:myCC:control" }
