@@ -4,5 +4,5 @@ Group CC "Chromecast" (Media)
 
 Switch Stereo_Hauptschalter "Stereo - Hauptschalter" (Media) {mqtt=">[helium:Netz39/Things/Stereo/Relais1/CMD:command:*:default]"}
 
-Dimmer CC_Volume "CC Volume" (Media, CC)
-Player CC_Music "CC_Music" (Media, CC)
+Dimmer CC_Volume "Chromecast Volume" (Media, CC)
+Player CC_Music "Chromecast Music" (Media, CC)
