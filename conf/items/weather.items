@@ -1,3 +1,3 @@
-Number   Outside_Temp   "Temperatur [%.2f °C]"   <temperature> (Wetter) {weather="locationId=MD, type=temperature, property=current"}
-Number   Outside_Hum      "Luftfeuchtigkeit [%d %%]" <humidity> (Wetter) {weather="locationId=MD, type=atmosphere, property=humidity"}
-Number Outside_Clouds "Bewölkung [%d %%]" <clouds> (Wetter) {weather="locationId=MD, type=clouds, property=percent"}
+Number Outside_Temp "Temperatur [%.2f °C]"   <temperature> (Wetter) {weather="locationId=MD, type=temperature, property=current"}
+Number Outside_Hum "Luftfeuchtigkeit [%d %%]" <humidity> (Wetter) {weather="locationId=MD, type=atmosphere, property=humidity"}
+Number Outside_Clouds "Bewölkung [%d %%]" (Wetter) {weather="locationId=MD, type=clouds, property=percent"}
