@@ -13,10 +13,10 @@ then
 
 	var DateTime dateTime = new DateTime((SpaceStatusChangeDate.state as DateTimeType).calendar.timeInMillis)
 	if (dateTime.plusMinutes(5).isBefore(now)) {
-	  //sendTweet('Es geht doch noch weiter! Immernoch #Spacetime im @netz39! ('+Timestamp+')')
+	  sendTweet('Es geht doch noch weiter! Immernoch #Spacetime im @netz39! ('+Timestamp+')')
 	}
 	else{
-		//sendTweet('#Spacetime im @netz39! ('+Timestamp+')')
+		sendTweet('#Spacetime im @netz39! ('+Timestamp+')')
 	}
 	postUpdate(SpaceStatusChangeDate, new DateTimeType())
 end
@@ -28,6 +28,6 @@ then
 	var SimpleDateFormat df = new SimpleDateFormat( "YYYY-MM-dd HH:mm" )
 	var String Timestamp = df.format( new Date() )
 	logInfo("SpaceStatus", "N39 SpaceStatus closed!")
-	//sendTweet('Das @netz39 beendet die #Spacetime! ('+Timestamp+')')
+	sendTweet('Das @netz39 beendet die #Spacetime! ('+Timestamp+')')
 	postUpdate(SpaceStatusChangeDate, new DateTimeType())
 end
