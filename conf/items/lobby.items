@@ -1,0 +1,4 @@
+Group Lobby (All)
+Group Media(Lobby)
+
+Switch Stereo_Hauptschalter		  "Stereo - Hauptschalter" (Media)		{mqtt=">[helium:Netz39/Things/Stereo/Relais1/CMD:command:*:default]"}
