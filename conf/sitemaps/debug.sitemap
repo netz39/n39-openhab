@@ -1,5 +1,5 @@
 sitemap debug label="N39 openhab DEBUG" {
     Frame label="Debug" {
-      Group All
+      Group item=All
     }
 }

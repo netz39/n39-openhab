@@ -14,7 +14,7 @@ sitemap n39 label="N39 openhab" {
     Frame label="Wetter Magdeburg"{
       Text item=Outside_Temp
       Text item=Outside_Hum
-      Text item=Outside_Clouds
+      Text item=Outside_QNH
       Group item=Wetter label="Weitere Wetterdaten"
     }
     Frame label="SpaceStatus"{
