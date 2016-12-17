@@ -11,12 +11,14 @@ sitemap n39 label="N39 openhab" {
     Frame label="Werkstatt"{
       Text label="Nichts zu steuern"
     }
+    Frame label="Wetter Magdeburg"{
+      Text item=Outside_Temp
+      Text item=Outside_Hum
+      Text item=Outside_Clouds
+      Group item=Wetter label="Weitere Wetterdaten"
+    }
     Frame label="SpaceStatus"{
       Switch item=SpaceStatus
-    }
-    Frame label="Wetter"{
-      Text item=Temperature
-      Text item=Humidity
     }
     Frame label="MQTT" {
         Group item=Gatekeeper
