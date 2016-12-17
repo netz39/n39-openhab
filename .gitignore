@@ -1,0 +1,9 @@
+# Files part of the openhab installation
+LICENSE.TXT
+start_debug.sh
+start.sh
+
+# Folders, not needed to config the N39-openhab
+addons/
+userdata/
+runtime/
