@@ -1,6 +1,6 @@
 Number Outside_Temp "Temperatur [%.2f °C]"   <temperature> (Wetter) {weather="locationId=MD, type=temperature, property=current"}
 Number Outside_Hum "Luftfeuchtigkeit [%d %%]" <humidity> (Wetter) {weather="locationId=MD, type=atmosphere, property=humidity"}
-Number Outside_QNH "Luftdruck [%d hPa]" (Wetter) {weather="locationId=MD, type=atmosphere, property=pressure"}
+Number Outside_QNH "Luftdruck [%d hPa]" (Wetter) <pressure> {weather="locationId=MD, type=atmosphere, property=pressure"}
 
 Group Sonne (Wetter)
 DateTime Sunrise_Time  "Sunrise [%1$tH:%1$tM]"  <sunrise> (Sonne) {astro="planet=sun, type=rise, property=start"}
