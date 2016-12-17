@@ -1,0 +1,6 @@
+rule "Test"
+when
+	Item Stereo_Hauptschalter changed
+then
+	say ("Test 1 2 3 4 5 6 7 8 9. super!")
+end
