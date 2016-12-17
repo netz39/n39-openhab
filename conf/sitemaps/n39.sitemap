@@ -1,4 +1,4 @@
-sitemap demo label="N39 openhab" {
+sitemap n39 label="N39 openhab" {
     Frame label="Lobby" {
       Switch item=Logouhr_ON
       Colorpicker item=Logouhr_RGB
