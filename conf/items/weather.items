@@ -1,0 +1,3 @@
+Group Wetter
+Number   Temperature   "Temperature [%.2f °C]"   {weather="locationId=MD, type=temperature, property=current"}
+Number   Humidity      "Humidity [%d %%]"        {weather="locationId=MD, type=atmosphere, property=humidity"}
