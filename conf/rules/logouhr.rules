@@ -39,6 +39,7 @@ rule "Tur geoeffnet"
 when
 	Item Door changed from CLOSED to OPEN
 then
+  playSound("Bell.mp3")
 	if(SpaceStatus.state == OFF){
 		sendCommand( Logouhr_RGBmode, 0)
 		sendCommand( Logouhr_RGBspd, 42 )
