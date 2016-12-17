@@ -15,8 +15,8 @@ sitemap n39 label="N39 openhab" {
       Switch item=SpaceStatus
     }
     Frame label="Wetter"{
-      Number item=Temperature
-      Number item=Humidity
+      Text item=Temperature
+      Text item=Humidity
     }
     Frame label="MQTT" {
         Group item=Gatekeeper
