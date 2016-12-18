@@ -8,4 +8,4 @@ Dimmer	Logouhr_W1		"LogouhrRGB - White1"		  (LogouhrESP)		{mqtt=">[helium:Netz39
 Dimmer	Logouhr_W2		"LogouhrRGB - White2"		  (LogouhrESP)		{mqtt=">[helium:Netz39/Things/Logouhr/LED4:command:*:default]"}
 Dimmer	Logouhr_RGBmode	"RGB - Mode"					  (LogouhrESP)		{mqtt=">[helium:Netz39/Things/Logouhr/mode:command:*:default]"}
 Dimmer	Logouhr_RGBspd	"RGB - Speed"					  (LogouhrESP)		{mqtt=">[helium:Netz39/Things/Logouhr/speed:command:*:default]"}
-Color  	Logouhr_RGB   	"Logouhr Farbwahl"		<rgb>	      (Lobby, LogouhrESP)
+Color  	Logouhr_RGB   	"Logouhr Farbwahl"		<colorlight>	      (Lobby, LogouhrESP)

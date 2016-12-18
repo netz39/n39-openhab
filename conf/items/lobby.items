@@ -1,4 +1,4 @@
-Group Lobby (All)
+Group Lobby "Lobby" <sofa> (All)
 Group Media (Lobby)
 Group CC "Chromecast" (Media)
 
