@@ -1,6 +1,6 @@
 sitemap n39 label="N39 openhab" {
     Frame label="Areas" {
-      Group item=Lb {
+      Group item=Lobby {
         Frame label="Chromecast" {
           Default item=CC_Music
           Slider item=CC_Volume icon=soundvolume
@@ -9,14 +9,14 @@ sitemap n39 label="N39 openhab" {
           Switch item=Logouhr_ON
           Colorpicker item=Logouhr_RGB
         }
-        Group item=Bs
       }
+      Group item=Bs
     }
     Frame label="Wetter Magdeburg"{
       Text item=Outside_Temp
       Text item=Outside_Hum
       Text item=Outside_QNH
-      Group item=Wetter label="Weitere Wetterdaten"
+      Group item=Wetter label="Weitere Wetterdaten" icon="wind"
     }
     Frame label="SpaceStatus"{
       Switch item=SpaceStatus
