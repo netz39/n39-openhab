@@ -4,3 +4,9 @@ Group Bs "Bastelstube"
 Group Lb "Labor"
 Group Hz "Hempelszimmer"
 Group Bd "Bad"
+
+Group MQTT "MQTT"
+
+Group Grp_StandardON "Space Standard On" // Gruppe von Dingen, die beim öffnen des Spaces angeschaltet werden
+Group Grp_SafetyOFF "Space Safety Off" // Gruppe von Dingen, die bei verlassen des Spaces ausgeschaltet werden
+Group Grp_CinemaOff

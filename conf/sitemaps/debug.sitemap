@@ -1,5 +1,9 @@
 sitemap debug label="N39 openhab DEBUG" {
-    Frame label="Debug" {
-      Group item=All
-    }
+  Frame label="Debug" {
+    Text label="Diese Sitemap dient zum Debuggen"
+  }
+  Frame label="Debug" {
+    Group item=All
+    Group item=MQTT
+  }
 }
