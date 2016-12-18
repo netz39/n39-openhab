@@ -1,0 +1,4 @@
+Group habpanel (All)
+Group habpanel_Lobby (habpanel)
+String habpanel_Lobby_speak
+String habpanel_Lobby_dashboard
