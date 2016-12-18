@@ -1,17 +1,16 @@
 sitemap n39 label="N39 openhab" {
-    Frame label="Lobby" {
-      Default item=Music
-      Slider item=Volume icon=soundvolume
-      Switch item=Logouhr_ON
-      Colorpicker item=Logouhr_RGB
-      Text item=Door
-      Text item=Doorlock
-    }
-    Frame label="Hackerstube"{
-      Text label="Nichts zu steuern"
-    }
-    Frame label="Werkstatt"{
-      Text label="Nichts zu steuern"
+    Frame label="Areas" {
+      Group item=Lb {
+        Frame label="Chromecast" {
+          Default item=CC_Music
+          Slider item=CC_Volume icon=soundvolume
+        }
+        Frame label="Logouhr" {
+          Switch item=Logouhr_ON
+          Colorpicker item=Logouhr_RGB
+        }
+        Group item=Bs
+      }
     }
     Frame label="Wetter Magdeburg"{
       Text item=Outside_Temp
@@ -21,9 +20,5 @@ sitemap n39 label="N39 openhab" {
     }
     Frame label="SpaceStatus"{
       Switch item=SpaceStatus
-    }
-    Frame label="MQTT" {
-        Group item=Gatekeeper
-        Group item=LogouhrESP
     }
 }
