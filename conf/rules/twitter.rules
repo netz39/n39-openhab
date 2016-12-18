@@ -16,7 +16,7 @@ then
 		sendTweet('#Spacetime im @netz39! ('+Timestamp+')')
 	}
 	else{
-		sendTweet('Es geht doch noch weiter! Immernoch #Spacetime im @netz39! ('+Timestamp+')')
+		sendTweet('Es geht doch noch weiter! Immer noch #Spacetime im @netz39! ('+Timestamp+')')
 	}
 	postUpdate(SpaceStatusChangeDate, new DateTimeType())
 end
