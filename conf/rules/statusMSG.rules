@@ -1,0 +1,13 @@
+rule "System start Message"
+when
+  System started
+then
+  sendTelegram("N39DEBUG", "openHAB startet ...")
+end
+
+rule "System shutdown Message"
+when
+  System shuts down
+then
+  sendTelegram("N39DEBUG", "openHAB fährt herunter ...")
+end
