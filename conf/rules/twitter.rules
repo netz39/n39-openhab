@@ -12,11 +12,11 @@ then
 	logInfo("SpaceStatus", "N39 SpaceStatus open!")
 
 	var DateTime dateTime = new DateTime((SpaceStatusChangeDate.state as DateTimeType).calendar.timeInMillis)
-	if (dateTime.plusMinutes(5).isBefore(now)) {
-	  sendTweet('Es geht doch noch weiter! Immernoch #Spacetime im @netz39! ('+Timestamp+')')
+	if (dateTime.plusMinutes(10).isBefore(now)) {
+		sendTweet('#Spacetime im @netz39! ('+Timestamp+')')
 	}
 	else{
-		sendTweet('#Spacetime im @netz39! ('+Timestamp+')')
+		sendTweet('Es geht doch noch weiter! Immernoch #Spacetime im @netz39! ('+Timestamp+')')
 	}
 	postUpdate(SpaceStatusChangeDate, new DateTimeType())
 end
