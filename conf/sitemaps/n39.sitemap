@@ -12,13 +12,17 @@ sitemap n39 label="N39 openhab" {
       }
       Group item=Bs
     }
+    Frame label="Rolladen"{
+      Switch item=RolladenLobby label="Rollläden Lobby  [(%d)]" mappings=[UP="Hoch", STOP="X", DOWN="Runter"]
+      Switch item=RolladenHackstube label="Rollläden Hackstube  [(%d)]" mappings=[UP="Hoch", STOP="X", DOWN="Runter"]
+    }
+    Frame label="SpaceStatus"{
+      Switch item=SpaceStatus
+    }
     Frame label="Wetter Magdeburg"{
       Text item=Outside_Temp
       Text item=Outside_Hum
       Text item=Outside_QNH
       Group item=Wetter label="Weitere Wetterdaten" icon="wind"
-    }
-    Frame label="SpaceStatus"{
-      Switch item=SpaceStatus
     }
 }
