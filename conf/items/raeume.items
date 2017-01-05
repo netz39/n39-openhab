@@ -16,6 +16,6 @@ Group Grp_CinemaOff
 Group gRolladenFront "Rolläden Front" <rollershutter>
 
 Rollershutter RolladenLobby "Rolläden Lobby" (gRolladen, gRolladenFront)
-Rollershutter RolladenLobbyDoor "Rolläden Eingangstür" (gRolladen)
-Rollershutter RolladenHackstube "Rolläden Hackstube" (gRolladen, gRolladenFront)
+Rollershutter RolladenLobbyDoor "Rolläden Eingangstür" (gRolladen, Lb)
+Rollershutter RolladenHackstube "Rolläden Hackstube" (gRolladen, gRolladenFront, Bs)
 Rollershutter RolladenHackstubeDoor "Rolläden Notfalltür" (gRolladen)
