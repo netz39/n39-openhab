@@ -25,4 +25,7 @@ sitemap n39 label="N39 openhab" {
       Text item=Outside_QNH
       Group item=Wetter label="Weitere Wetterdaten" icon="wind"
     }
+    Frame label="Hinweis"{
+      Text label="Das Touchinterface für die Wandmontage wird unter http://openhab/habpanel/index.html entwickelt"
+    }
 }
