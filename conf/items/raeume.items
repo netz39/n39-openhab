@@ -6,16 +6,7 @@ Group Hz "Hempelszimmer"
 Group Bd "Bad"
 
 Group MQTT "MQTT"
-Group gRolladen "Rolläden" <rollershutter>
 
 Group Grp_StandardON "Space Standard On" // Gruppe von Dingen, die beim öffnen des Spaces angeschaltet werden
 Group Grp_SafetyOFF "Space Safety Off" // Gruppe von Dingen, die bei verlassen des Spaces ausgeschaltet werden
 Group Grp_CinemaOff
-
-//Die Hauptrolläden werden gruppiert
-Group gRolladenFront "Rolläden Front" <rollershutter>
-
-Rollershutter RolladenLobby "Rolläden Lobby" (gRolladen, gRolladenFront)
-Rollershutter RolladenLobbyDoor "Rolläden Eingangstür" (gRolladen, Lb)
-Rollershutter RolladenHackstube "Rolläden Hackstube" (gRolladen, gRolladenFront, Bs)
-Rollershutter RolladenHackstubeDoor "Rolläden Notfalltür" (gRolladen)

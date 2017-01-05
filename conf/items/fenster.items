@@ -1,1 +1,11 @@
 Contact Ws_Fenster <window> (Ws)
+
+
+//Rolläden
+Group gRolladen "Rolläden" <rollershutter>
+Group gRolladenFront "Rolläden Front" <rollershutter>
+
+Rollershutter RolladenLobby "Rolläden Lobby" (gRolladen, gRolladenFront)
+Rollershutter RolladenLobbyDoor "Rolläden Eingangstür" (gRolladen, Lb)
+Rollershutter RolladenHackstube "Rolläden Hackstube" (gRolladen, gRolladenFront, Bs)
+Rollershutter RolladenHackstubeDoor "Rolläden Notfalltür" (gRolladen)
