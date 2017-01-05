@@ -11,3 +11,6 @@ String AmpelEvent "AmpelEvent [%s]" (Gatekeeper) {mqtt="<[helium:Netz39/Things/A
 
 Switch SpaceStatus "N39 SpaceStatus [%s]"	<switch>	{mqtt="<[helium:Netz39/SpaceAPI/isOpen:state:MAP(SpaceAPI.map)]", http=">[ON:POST:http://wittgenstein/open] >[OFF:POST:http://wittgenstein/close]"}
 DateTime SpaceStatusChangeDate "SpaceStatus Update [%1$ta %1$tR]"
+
+Number SpaceStatusChartOpen
+Number SpaceStatusChartClosed

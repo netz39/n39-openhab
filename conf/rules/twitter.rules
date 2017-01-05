@@ -12,12 +12,14 @@ then
 	logInfo("SpaceStatus", "N39 SpaceStatus open!")
 
 	var DateTime dateTime = new DateTime((SpaceStatusChangeDate.state as DateTimeType).calendar.timeInMillis)
-	if (dateTime.plusMinutes(10).isBefore(now)) {
+	if (dateTime.plusMinutes(15).isBefore(now)) {
 		sendTweet('#Spacetime im @netz39! ('+Timestamp+')')
 	}
 	else{
 		sendTweet('Es geht doch noch weiter! Immer noch #Spacetime im @netz39! ('+Timestamp+')')
 	}
+	postUpdate(SpaceStatusChartOpen, 1)
+	postUpdate(SpaceStatusChartClosed, 0)
 	postUpdate(SpaceStatusChangeDate, new DateTimeType())
 end
 
@@ -29,5 +31,7 @@ then
 	var String Timestamp = df.format( new Date() )
 	logInfo("SpaceStatus", "N39 SpaceStatus closed!")
 	sendTweet('Das @netz39 beendet die #Spacetime! ('+Timestamp+')')
+	postUpdate(SpaceStatusChartOpen, 0)
+	postUpdate(SpaceStatusChartClosed, 1)
 	postUpdate(SpaceStatusChangeDate, new DateTimeType())
 end
