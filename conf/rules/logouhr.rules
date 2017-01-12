@@ -56,7 +56,6 @@ then
 			sendCommand( Logouhr_RGBspd, 42 )
 		]
 	}
-	playSound("Bell.mp3")
 end
 
 rule "Tuer geschlossen"
