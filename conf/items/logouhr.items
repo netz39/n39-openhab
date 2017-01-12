@@ -1,6 +1,7 @@
 Group LogouhrESP "ESP Dimmer - Logouhr" <rgb>
 
 Switch 	Logouhr_ON	"Logouhr"						<clock> (Lobby, Licht)  [ "homekit:Lightbulb" ]
+Switch  Logouhr_Doorblink "Logo Türblinken" <alarm> (LogouhrESP)
 Dimmer	Logouhr_R		  "RGB - Rot"						    (LogouhrESP)		{mqtt=">[helium:Netz39/Things/Logouhr/LED0:command:*:default]"}
 Dimmer	Logouhr_G		  "RGB - Grün"					    (LogouhrESP)		{mqtt=">[helium:Netz39/Things/Logouhr/LED2:command:*:default]"}
 Dimmer	Logouhr_B		  "RGB - Blau"					    (LogouhrESP)		{mqtt=">[helium:Netz39/Things/Logouhr/LED1:command:*:default]"}
