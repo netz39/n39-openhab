@@ -1,0 +1,3 @@
+Group KODI (All)
+
+String kodi_notification "Kodi Notification"   (KODI)   { channel="kodi:device:KODI:shownotification" }
