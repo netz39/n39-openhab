@@ -46,7 +46,7 @@ then
 		sendCommand( Logouhr_G, 0 )
 		sendCommand( Logouhr_B, 0 )
 	}
-	elseif(Logouhr_Doorblink.state == ON){
+	else if(Logouhr_Doorblink.state == ON){
 		//Setze Mode auf Blinken und Blinkgeschwindigkeit auf 2
 		sendCommand( Logouhr_RGBmode, 2 )
 		sendCommand( Logouhr_RGBspd, 2 )
