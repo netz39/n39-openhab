@@ -1,0 +1,9 @@
+Group Status (All)
+Group Network (Status)
+
+Switch on_wittgenstein "Wittgenstein Online"   (Network)   { channel="network:device:wittgenstein:online" }
+Switch on_platon "Platon Online"   (Network)   { channel="network:device:platon:online" }
+Switch on_konfuzius "Konfuzius / KODI Online"   (Network)   { channel="network:device:konfuzius:online" }
+
+Switch on_laserjet "Laserjet Online"   (Network)   { channel="network:device:laserjet:online" }
+Switch on_labelprinter "Label Printer Online"   (Network) { channel="network:device:labelprinter:online" }
