@@ -1,4 +1,10 @@
-Group KODI (All)
-Dimmer Kodi_Volume "Kodi Lautstärke"   (KODI){ channel="kodi:kodi:Kodi:volume" }
+// Das hier ist die Item-Konfiguration für den KODI in der Lobby
+// weitere Infos zum KODI-Binding gibt es neben der openHab Doku auch hier: https://github.com/openhab/openhab2-addons/tree/master/addons/binding/org.openhab.binding.kodi
 
-String Kodi_Notification "Kodi Notification"   (KODI)   { channel="kodi:kodi:KODI:shownotification" }
+Group KODI (All)
+Player Kodi_Player "Kodi Wiedergabe" (KODI) { channel="kodi:kodi:Kodi:control" }
+Dimmer Kodi_Volume "Kodi Lautstärke"   (KODI) { channel="kodi:kodi:Kodi:volume" }
+Switch Kodi_Mute "Kodi Mute" (KODI) { channel="kodi:kodi:Kodi:mute" }
+
+
+String Kodi_Notification "Kodi Notification"   (KODI)   { channel="kodi:kodi:Kodi:shownotification" }
