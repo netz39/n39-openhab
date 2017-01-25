@@ -1,3 +1,4 @@
 Group KODI (All)
+Dimmer Kodi_Volume "Kodi Lautstärke"   (KODI){ channel="kodi:kodi:Kodi:volume" }
 
-String kodi_notification "Kodi Notification"   (KODI)   { channel="kodi:device:KODI:shownotification" }
+String Kodi_Notification "Kodi Notification"   (KODI)   { channel="kodi:kodi:KODI:shownotification" }
