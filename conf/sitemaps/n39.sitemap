@@ -2,8 +2,9 @@ sitemap n39 label="N39 openhab" {
     Frame label="Areas" {
       Group item=Lobby {
         Frame label="KODI" {
-          Default item=CC_Music
+          Default item=Kodi_Player
           Slider item=Kodi_Volume icon=soundvolume
+          Switch item=Kodi_Mute icon=mute
         }
         Frame label="Chromecast" {
           Default item=CC_Music
