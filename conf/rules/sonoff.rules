@@ -44,7 +44,7 @@ when
 then
 	//This Script transforms the Gatekeeper Events into 2 States
 	if(SpaceLeverEnable.state==ON) {
-    if (SpaceLeverUP.state==0){
+    if (SpaceLeverDOWN.state==0){
         SpaceStatus.sendCommand(OFF)
         sendTelegram("N39DEBUG", "SpaceLever schaltet INTO DOWN ...")
     }else{
