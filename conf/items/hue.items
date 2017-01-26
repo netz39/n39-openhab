@@ -1,0 +1,5 @@
+Group Hue (All)
+Switch	Light1_Toggle	 (Hue)	{ channel="hue:0210:0017884a0351:2:color" }
+Dimmer  Light1_Dimmer		(Hue)	{ channel="hue:0210:0017884a0351:2:color" }
+Color 	Light1_Color		(Hue)	{ channel="hue:0210:0017884a0351:2:color" }
+Dimmer 	Light1_ColorTemp	(Hue)	{ channel="hue:0210:0017884a0351:2:color_temperature" }
