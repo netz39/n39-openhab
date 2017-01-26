@@ -18,6 +18,10 @@ then
 	else{
 		sendTweet('Es geht doch noch weiter! Immer noch #Spacetime im @netz39! ('+Timestamp+')')
 	}
+	// Um Scharfe Kanten im Diagramm zu haben
+	postUpdate(SpaceStatusChartClosed, 1) 
+	postUpdate(SpaceStatusChartOpen, 0)
+	// Setzte Werte für Status neu
 	postUpdate(SpaceStatusChartOpen, 1)
 	postUpdate(SpaceStatusChartClosed, 0)
 	postUpdate(SpaceStatusChangeDate, new DateTimeType())
@@ -31,6 +35,10 @@ then
 	var String Timestamp = df.format( new Date() )
 	logInfo("SpaceStatus", "N39 SpaceStatus closed!")
 	sendTweet('Das @netz39 beendet die #Spacetime! ('+Timestamp+')')
+	// Um Scharfe Kanten im Diagramm zu haben
+	postUpdate(SpaceStatusChartClosed, 0) 
+	postUpdate(SpaceStatusChartOpen, 1)
+	// Setzte Werte für Status neu
 	postUpdate(SpaceStatusChartOpen, 0)
 	postUpdate(SpaceStatusChartClosed, 1)
 	postUpdate(SpaceStatusChangeDate, new DateTimeType())
