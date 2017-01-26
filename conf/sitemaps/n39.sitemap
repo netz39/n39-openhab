@@ -6,6 +6,9 @@ sitemap n39 label="N39 openhab" {
           Slider item=Kodi_Volume icon=soundvolume
           Switch item=Kodi_Mute icon=mute
         }
+        Frame label="Klima" {
+          Text item=LobbyTemp valuecolor=[>25="red",>16="green",<=16="blue"]    
+        }
         Frame label="Chromecast" {
           Default item=CC_Music
           Slider item=CC_Volume icon=soundvolume
