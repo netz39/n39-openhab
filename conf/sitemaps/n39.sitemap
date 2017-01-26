@@ -14,6 +14,10 @@ sitemap n39 label="N39 openhab" {
           Switch item=Logouhr_ON
           Colorpicker item=Logouhr_RGB
         }
+        Frame label="HUE Test" {
+          Switch item=Light1_Toggle
+          Colorpicker item=Light1_Color
+        }
       }
       Group item=Bs
     }
