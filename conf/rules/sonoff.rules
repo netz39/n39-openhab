@@ -1,0 +1,55 @@
+rule "Sonoff9796700 Buttons"
+when
+	Item LobbyButton changed
+then
+	//This Script transforms the Gatekeeper Events into 2 States
+	if(LobbyButton.state==1) {
+    if (LobbyRelais.state!=ON)      // item OFF or uninitialized
+        LobbyRelais.sendCommand(ON)
+    else
+        LobbyRelais.sendCommand(OFF)
+	}
+  else if(LobbyButton.state==2) {
+  if (Logouhr_ON.state!=ON)      // item OFF or uninitialized
+      Logouhr_ON.sendCommand(ON)
+  else
+      Logouhr_ON.sendCommand(OFF)
+	}
+	else if(LobbyButton.state==-1) {
+		LobbyRelais.sendCommand(OFF)
+    Logouhr_ON.sendCommand(OFF)
+	}
+  postUpdate(LobbyButton,0)
+end
+
+rule "SpaceLever UP"
+when
+	Item SpaceLeverUP received update
+then
+	//This Script transforms the Gatekeeper Events into 2 States
+	if(SpaceLeverEnable.state==ON) {
+    if (SpaceLeverUP.state==0){
+        SpaceStatus.sendCommand(ON)
+        sendTelegram("N39DEBUG", "SpaceLever schaltet INTO UP ...")
+    }else{
+        SpaceStatus.sendCommand(OFF)
+        sendTelegram("N39DEBUG", "SpaceLever schaltet FROM UP ...")
+    }
+	}
+end
+
+rule "SpaceLever UP"
+when
+	Item SpaceLeverDOWN received update
+then
+	//This Script transforms the Gatekeeper Events into 2 States
+	if(SpaceLeverEnable.state==ON) {
+    if (SpaceLeverUP.state==0){
+        SpaceStatus.sendCommand(OFF)
+        sendTelegram("N39DEBUG", "SpaceLever schaltet INTO DOWN ...")
+    }else{
+        SpaceStatus.sendCommand(ON)
+        sendTelegram("N39DEBUG", "SpaceLever schaltet FROM DOWN ...")
+    }
+	}
+end
