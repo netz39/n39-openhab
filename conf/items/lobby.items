@@ -1,4 +1,9 @@
 Group Lobby "Lobby" <sofa> (All)
+
+Group Sonoff9796700 (MQTT)
+Number LobbyTemp "Lobby Temperatur [%.1f °C]" <temperature> (Lobby, Sonoff9796700) {mqtt="<[helium:/Lobby/Sonoff9796700/Temperature:state:default]"}
+Number LobbyButton "Lobby Button" (Lobby, Sonoff9796700) {mqtt="<[helium:/Lobby/Sonoff9796700/Button:state:default]"}
+
 Group Media (Lobby)
 Group CC "Chromecast" (Media)
 
