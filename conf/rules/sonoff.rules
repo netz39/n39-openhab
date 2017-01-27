@@ -26,30 +26,30 @@ rule "SpaceLever UP"
 when
 	Item SpaceLeverUP received update
 then
-	//This Script transforms the Gatekeeper Events into 2 States
-	if(SpaceLeverEnable.state==ON) {
-    if (SpaceLeverUP.state==0){
-        SpaceStatus.sendCommand(ON)
-        sendTelegram("N39DEBUG", "SpaceLever schaltet INTO UP ...")
-    }else{
-        SpaceStatus.sendCommand(OFF)
-        sendTelegram("N39DEBUG", "SpaceLever schaltet FROM UP ...")
-    }
+	// Diese Script ändern jegliche Änderungen des oberen oder unteren Kontakts in eine SpaceStatus Änderung
+  if (SpaceLeverUP.state==0){
+		sendTelegram("N39DEBUG", "SpaceLever schaltet INTO UP (2)")
+		if(SpaceLeverEnable.state==ON)
+      SpaceStatus.sendCommand(ON)
+  }else{
+		sendTelegram("N39DEBUG", "SpaceLever schaltet FROM UP (3)")
+		if(SpaceLeverEnable.state==ON)
+      SpaceStatus.sendCommand(OFF)
 	}
 end
 
-rule "SpaceLever UP"
+rule "SpaceLever DOWN"
 when
 	Item SpaceLeverDOWN received update
 then
-	//This Script transforms the Gatekeeper Events into 2 States
-	if(SpaceLeverEnable.state==ON) {
-    if (SpaceLeverDOWN.state==0){
-        SpaceStatus.sendCommand(OFF)
-        sendTelegram("N39DEBUG", "SpaceLever schaltet INTO DOWN ...")
-    }else{
-        SpaceStatus.sendCommand(ON)
-        sendTelegram("N39DEBUG", "SpaceLever schaltet FROM DOWN ...")
-    }
+	// Diese Script ändern jegliche Änderungen des oberen oder unteren Kontakts in eine SpaceStatus Änderung
+	if (SpaceLeverUP.state==0){
+		sendTelegram("N39DEBUG", "SpaceLever schaltet INTO DOWN (4)")
+		if(SpaceLeverEnable.state==ON)
+			SpaceStatus.sendCommand(OFF)
+	}else{
+		sendTelegram("N39DEBUG", "SpaceLever schaltet FROM DOWN (1)")
+		if(SpaceLeverEnable.state==ON)
+			SpaceStatus.sendCommand(ON)
 	}
 end
