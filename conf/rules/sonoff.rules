@@ -1,21 +1,23 @@
-rule "Sonoff9796700 Buttons"
+rule "Lobby (Sonoff9796700) Buttons"
 when
 	Item LobbyButton changed
 then
-	//This Script transforms the Gatekeeper Events into 2 States
 	if(LobbyButton.state==1) {
+		//Aktionen bei einmaligem Klicken -> Toggle Lobbylicht
     if (LobbyRelais.state!=ON)      // item OFF or uninitialized
-        LobbyRelais.sendCommand(ON)
+      LobbyRelais.sendCommand(ON)
     else
-        LobbyRelais.sendCommand(OFF)
+      LobbyRelais.sendCommand(OFF)
 	}
   else if(LobbyButton.state==2) {
-  if (Logouhr_ON.state!=ON)      // item OFF or uninitialized
+		//Aktionen bei zweimaligem Klicken -> Toggle Logouhr
+  	if (Logouhr_ON.state!=ON)      // item OFF or uninitialized
       Logouhr_ON.sendCommand(ON)
-  else
+  	else
       Logouhr_ON.sendCommand(OFF)
 	}
 	else if(LobbyButton.state==-1) {
+		//Aktionen wenn Button gedrückt gehalten wurde -> Schalte gesamte Lobbybeleuchtung aus
 		LobbyRelais.sendCommand(OFF)
     Logouhr_ON.sendCommand(OFF)
 	}
