@@ -1,6 +1,0 @@
-rule "Soundtest"
-when
-	Item Stereo_Hauptschalter changed from OFF to ON
-then
-	playStream("http://www.deutschlandradio.de/streaming/dlf_lq_mp3.m3u")
-end
