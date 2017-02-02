@@ -2,7 +2,9 @@ rule "Add MemberIn"
 when
 	Item Stat_MemberInAdd changed to ON
 then
-	postUpdate(Stat_MemberIn, Stat_MemberIn.state+1)
+  var Number anz = Stat_MemberIn.state
+  anz = anz+1
+	postUpdate(Stat_MemberIn, anz)
   postUpdate(Stat_MemberInAdd, OFF)
 end
 
@@ -10,8 +12,10 @@ rule "Sub MemberIn"
 when
 	Item Stat_MemberInSub changed to ON
 then
-  if(Stat_MemberIn.state > 0){
-	 postUpdate(Stat_MemberIn, Stat_MemberIn.state-1)
+  var Number anz = Stat_MemberIn.state
+  if(anz > 0){
+    anz = anz-1
+	  postUpdate(Stat_MemberIn, anz)
   }
   postUpdate(Stat_MemberInAdd, OFF)
 end
