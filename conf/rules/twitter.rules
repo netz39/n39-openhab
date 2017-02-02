@@ -3,14 +3,22 @@ import org.joda.time.*
 import java.util.Date
 import java.text.SimpleDateFormat
 
-rule "Twitter N39 opened"
+rule "N39 opened"
 when
 	Item SpaceStatus changed from OFF to ON
 then
-	var SimpleDateFormat df = new SimpleDateFormat( "YYYY-MM-dd HH:mm" )
-	var String Timestamp = df.format( new Date() )
+	// Um Scharfe Kanten im Diagramm zu haben setze erstmal alte Werte erneut
+	postUpdate(SpaceStatusChartClosed, 1)
+	postUpdate(SpaceStatusChartOpen, 0)
+
 	logInfo("SpaceStatus", "N39 SpaceStatus open!")
 
+	// Die großen Rolläden hochfahren
+	gRolladenFront.sendCommand(UP)
+
+	// Tweete, dass Space (wieder) offen ist
+	var SimpleDateFormat df = new SimpleDateFormat( "YYYY-MM-dd HH:mm" )
+	var String Timestamp = df.format( new Date() )
 	var DateTime dateTime = new DateTime((SpaceStatusChangeDate.state as DateTimeType).calendar.timeInMillis)
 	if (dateTime.plusMinutes(15).isBefore(now)) {
 		sendTweet('#Spacetime im @netz39! ('+Timestamp+')')
@@ -18,28 +26,33 @@ then
 	else{
 		sendTweet('Es geht doch noch weiter! Immer noch #Spacetime im @netz39! ('+Timestamp+')')
 	}
-	// Um Scharfe Kanten im Diagramm zu haben
-	postUpdate(SpaceStatusChartClosed, 1) 
-	postUpdate(SpaceStatusChartOpen, 0)
+
 	// Setzte Werte für Status neu
+	postUpdate(SpaceStatusChangeDate, new DateTimeType())
 	postUpdate(SpaceStatusChartOpen, 1)
 	postUpdate(SpaceStatusChartClosed, 0)
-	postUpdate(SpaceStatusChangeDate, new DateTimeType())
 end
 
-rule "Twitter N39 closed"
+rule "N39 closed"
 when
 	Item SpaceStatus changed from ON to OFF
 then
+	// Um Scharfe Kanten im Diagramm zu haben setze erstmal alte Werte erneut
+	postUpdate(SpaceStatusChartClosed, 0)
+	postUpdate(SpaceStatusChartOpen, 1)
+
+	logInfo("SpaceStatus", "N39 SpaceStatus closed!")
+
+	// Die großen Rolläden herunterfahren
+	gRolladenFront.sendCommand(DOWN)
+
+	// Tweete, dass Space geschlossen wurde
 	var SimpleDateFormat df = new SimpleDateFormat( "YYYY-MM-dd HH:mm" )
 	var String Timestamp = df.format( new Date() )
-	logInfo("SpaceStatus", "N39 SpaceStatus closed!")
 	sendTweet('Das @netz39 beendet die #Spacetime! ('+Timestamp+')')
-	// Um Scharfe Kanten im Diagramm zu haben
-	postUpdate(SpaceStatusChartClosed, 0) 
-	postUpdate(SpaceStatusChartOpen, 1)
+
 	// Setzte Werte für Status neu
+	postUpdate(SpaceStatusChangeDate, new DateTimeType())
 	postUpdate(SpaceStatusChartOpen, 0)
 	postUpdate(SpaceStatusChartClosed, 1)
-	postUpdate(SpaceStatusChangeDate, new DateTimeType())
 end
