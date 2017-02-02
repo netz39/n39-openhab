@@ -1,0 +1,13 @@
+Group Stat "Statistik" (All)
+Number Stat_WKalt_Kueche "Kaltwasser Küche" (Stat)
+Number Stat_WWarm_Kueche "Warmwasser Küche" (Stat)
+Number Stat_WKalt_Labor "Kaltwasser Labor" (Stat)
+Number Stat_WWarm_Labor "Warmwasser Labor" (Stat)
+
+Number Stat_MemberIn "Mitglieder im Space" (Stat)
+Switch Stat_MemberInAdd
+Switch Stat_MemberInSub
+
+Number Stat_GuestsIn "Gäste im Space" (Stat)
+Switch Stat_GuestInAdd
+Switch Stat_GuestInSub
