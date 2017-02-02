@@ -3,5 +3,5 @@ Number Outside_Hum "Luftfeuchtigkeit [%d %%]" <humidity> (Wetter) {weather="loca
 Number Outside_QNH "Luftdruck [%d hPa]" <pressure> (Wetter) {weather="locationId=MD, type=atmosphere, property=pressure"}
 
 Group Sonne <sun> (Wetter)
-DateTime Sunrise_Time  "Sunrise [%1$tH:%1$tM]"  <sunrise> (Sonne) {astro="planet=sun, type=rise, property=start"}
-DateTime Sunset_Time  "Sunrise [%1$tH:%1$tM]"  <sunset> (Sonne) {astro="planet=sun, type=set, property=start"}
+DateTime Sunrise_Time  "Sunrise [%1$tH:%1$tM]"  <sunrise> (Sonne)  { channel="astro:sun:home:rise#start" }
+DateTime Sunset_Time  "Sunrise [%1$tH:%1$tM]"  <sunset> (Sonne) { channel="astro:sun:home:set#start" }
