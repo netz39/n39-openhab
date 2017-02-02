@@ -17,6 +17,7 @@ then
 	gRolladenFront.sendCommand(UP)
 
 	postUpdate(Stat_MemberIn, 1)
+	sendCommand(Grp_StandardON, OFF)
 
 	// Tweete, dass Space (wieder) offen ist
 	var SimpleDateFormat df = new SimpleDateFormat( "YYYY-MM-dd HH:mm" )
@@ -49,6 +50,7 @@ then
 	gRolladenFront.sendCommand(DOWN)
 
 	postUpdate(Stat_MemberIn, 0)
+	sendCommand(Grp_SafetyOFF, OFF)
 
 	// Tweete, dass Space geschlossen wurde
 	var SimpleDateFormat df = new SimpleDateFormat( "YYYY-MM-dd HH:mm" )
