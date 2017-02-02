@@ -10,7 +10,7 @@ Switch SpaceLeverEnable "Spacelever Aktivieren" (Lobby)
 Number SpaceLeverButton "SpaceLever Button" (Lobby, Sonoff9796700) {mqtt="<[helium:/Lobby/Sonoff9829798/Button0:state:default]"}
 Number SpaceLeverUP "SpaceLever UP" (Sonoff9796700) {mqtt="<[helium:/Lobby/Sonoff9829798/Button2:state:default]"}
 Number SpaceLeverDOWN "SpaceLever DOWN" (Sonoff9796700) {mqtt="<[helium:/Lobby/Sonoff9829798/Button1:state:default]"}
-Switch LobbyRelais "SpaceLever Relais" (Lobby, Sonoff9796700) {mqtt=">[helium:/Lobby/Sonoff9829798/Relais:command:*:default]"}
+Switch SpaceLeverRelais "SpaceLever Relais" (Lobby, Sonoff9796700) {mqtt=">[helium:/Lobby/Sonoff9829798/Relais:command:*:default]"}
 
 Group Media (Lobby)
 Group CC "Chromecast" (Media)
