@@ -16,6 +16,8 @@ then
 	// Die großen Rolläden hochfahren
 	gRolladenFront.sendCommand(UP)
 
+	postUpdate(Stat_MemberIn, 1)
+
 	// Tweete, dass Space (wieder) offen ist
 	var SimpleDateFormat df = new SimpleDateFormat( "YYYY-MM-dd HH:mm" )
 	var String Timestamp = df.format( new Date() )
@@ -45,6 +47,8 @@ then
 
 	// Die großen Rolläden herunterfahren
 	gRolladenFront.sendCommand(DOWN)
+
+	postUpdate(Stat_MemberIn, 0)
 
 	// Tweete, dass Space geschlossen wurde
 	var SimpleDateFormat df = new SimpleDateFormat( "YYYY-MM-dd HH:mm" )
