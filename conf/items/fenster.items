@@ -7,5 +7,5 @@ Group gRolladenFront "Rolläden Front" <rollershutter>
 
 Rollershutter RolladenLobby "Rolläden Lobby [(%d)]" (gRolladen, gRolladenFront)
 Rollershutter RolladenLobbyDoor "Rolläden Eingangstür [(%d)]" (gRolladen, Lb) {mqtt=">[helium:Netz39/Things/Rolladen1/CMD:command:*:default]"}
-Rollershutter RolladenHackstube "Rolläden Hackstube [(%d)]" (gRolladen, gRolladenFront, Bs) {mqtt=">[helium:Netz39/Things/Rolladen4/CMD:command:*:default]"}
-Rollershutter RolladenHackstubeDoor "Rolläden Notfalltür [(%d)]" (gRolladen)
+Rollershutter RolladenHs "Rolläden Hackstube [(%d)]" (gRolladen, gRolladenFront,Hs) {mqtt=">[helium:Netz39/Things/Rolladen4/CMD:command:*:default]"}
+Rollershutter RolladenHsDoor "Rolläden Notfalltür [(%d)]" (gRolladen)
