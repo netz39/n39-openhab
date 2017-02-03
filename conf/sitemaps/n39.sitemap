@@ -36,7 +36,7 @@ sitemap n39 label="N39 openhab" {
     }
     Frame label="SpaceStatus"{
       Switch item=SpaceStatus
-      Switch item=SpaceLeverEnable
+      Text item=Stat_MemberIn
     }
     Frame label="Wetter Magdeburg"{
       Text item=Outside_Temp
