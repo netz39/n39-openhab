@@ -24,8 +24,6 @@ sitemap n39 label="N39 openhab" {
           Text item=HsTemp valuecolor=[>25="red",>16="green",<=16="blue"]
           Selection item=RolladenHs mappings=[UP="Hoch", STOP="X", DOWN="Runter"]
         }
-        Frame label="Beleuchtung" {
-        }
         Frame label="Netzwerkgeräte" {
           Switch item=on_laserjet
           Switch item=on_labelprinter
