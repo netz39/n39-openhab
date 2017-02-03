@@ -3,7 +3,7 @@ sitemap n39 label="N39 openhab" {
       Group item=Lobby {
         Frame label="Klima" {
           Text item=LobbyTemp valuecolor=[>25="red",>16="green",<=16="blue"]
-          Selection item=RolladenLobby mappings=[UP="Hoch", STOP="X", DOWN="Runter"]
+          Switch item=RolladenLobby mappings=[UP="Hoch", STOP="X", DOWN="Runter"]
         }
         Frame label="KODI" {
           Default item=Kodi_Player
