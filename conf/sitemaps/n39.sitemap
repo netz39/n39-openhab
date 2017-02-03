@@ -3,7 +3,7 @@ sitemap n39 label="N39 openhab" {
       Group item=Lobby {
         Frame label="Klima" {
           Text item=LobbyTemp valuecolor=[>25="red",>16="green",<=16="blue"]
-          Selection item=RolladenLobby label="Rollläden Lobby" mappings=[UP="Hoch", STOP="X", DOWN="Runter"]
+          Selection item=RolladenLobby mappings=[UP="Hoch", STOP="X", DOWN="Runter"]
         }
         Frame label="KODI" {
           Default item=Kodi_Player
@@ -19,11 +19,22 @@ sitemap n39 label="N39 openhab" {
           Slider item=CC_Volume icon=soundvolume
         }
       }
-      Group item=Bs
+      Group item=Hs {
+        Frame label="Klima" {
+          Text item=HsTemp valuecolor=[>25="red",>16="green",<=16="blue"]
+          Selection item=RolladenHs mappings=[UP="Hoch", STOP="X", DOWN="Runter"]
+        }
+        Frame label="Beleuchtung" {
+        }
+        Frame label="Netzwerkgeräte" {
+          Switch item=on_laserjet
+          Switch item=on_labelprinter
+        }
+      }
     }
     Frame label="Rolladen"{
-      Switch item=RolladenLobby label="Rollläden Lobby  [(%d)]" mappings=[UP="Hoch", STOP="X", DOWN="Runter"]
-      Switch item=RolladenHackstube label="Rollläden Hackstube  [(%d)]" mappings=[UP="Hoch", STOP="X", DOWN="Runter"]
+      Switch item=RolladenLobby mappings=[UP="Hoch", STOP="X", DOWN="Runter"]
+      Switch item=RolladenHs mappings=[UP="Hoch", STOP="X", DOWN="Runter"]
     }
     Frame label="SpaceStatus"{
       Switch item=SpaceStatus
