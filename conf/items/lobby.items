@@ -6,6 +6,7 @@ Number LobbyButton "Lobby Button" (Lobby, Sonoff9796700) {mqtt="<[helium:/Lobby/
 Switch LobbyRelais "Lobby Wandbeleuchtung" <light> (Lobby, Sonoff9796700) {mqtt=">[helium:/Lobby/Sonoff9796700/Relais:command:*:default]"}
 
 Group SpaceLever (MQTT)
+String SpaceLeverState "Spacelever Status [%s]" (Lobby, SpaceLever) {mqtt="<[helium:Netz39/Things/StatusSwitch/Lever/State:state:default]"}
 Switch SpaceLeverEnable "Spacelever Aktivieren" (Lobby)
 Number SpaceLeverButton "SpaceLever Button" (Lobby, Sonoff9796700) {mqtt="<[helium:/Lobby/Sonoff9829798/Button0:state:default]"}
 Number SpaceLeverUP "SpaceLever UP" (Sonoff9796700) {mqtt="<[helium:/Lobby/Sonoff9829798/Button2:state:default]"}
