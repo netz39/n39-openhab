@@ -14,7 +14,7 @@ then
 	logInfo("SpaceStatus", "N39 SpaceStatus open!")
 
 	// Die großen Rolläden hochfahren
-	gRolladenFront.sendCommand(UP)
+	sendCommand(gRolladenFront,UP)
 
 	postUpdate(Stat_MemberIn, 1)
 	sendCommand(Grp_SpaceStandard, ON)	// Schalte Items in der Gruppe Grp_SpaceStandard ein
@@ -47,7 +47,7 @@ then
 	logInfo("SpaceStatus", "N39 SpaceStatus closed!")
 
 	// Die großen Rolläden herunterfahren
-	gRolladenFront.sendCommand(DOWN)
+	sendCommand(gRolladenFront,DOWN)
 
 	postUpdate(Stat_MemberIn, 0)
 	sendCommand(Grp_SpaceShutdown, OFF) // Schalte Items in der Gruppe Grp_SpaceShutdown aus
