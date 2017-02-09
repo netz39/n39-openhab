@@ -17,5 +17,5 @@ then
     anz = anz-1
 	  postUpdate(Stat_MemberIn, anz)
   }
-  postUpdate(Stat_MemberInAdd, OFF)
+  postUpdate(Stat_MemberInSub, OFF)
 end
