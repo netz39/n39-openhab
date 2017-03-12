@@ -16,3 +16,5 @@ Switch Stereo_Hauptschalter "Stereo - Hauptschalter" (Media, Grp_SpaceShutdown) 
 
 Dimmer CC_Volume "Chromecast Volume" (Media, CC)
 Player CC_Music "Chromecast Music" <player> (Media, CC)
+
+String ShuttercontrolBtn "Shutter Light Button" <light> (Lobby) {mqtt="<[helium:Netz39/Things/Shuttercontrol/Button/Events:command:default]"}
