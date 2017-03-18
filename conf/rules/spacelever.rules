@@ -1,14 +1,13 @@
 rule "SpaceLever Change"
 when
-	Item SpaceLeverState received update
+  Item SpaceLeverState received update
 then
+  logInfo("SpaceStatus", "Spacelever was updated!")
   if (SpaceLeverState.state == "open"){
-		sendTelegram("N39DEBUG", "SpaceLever schaltet OPEN")
-		if(SpaceLeverEnable.state==ON)
-      SpaceStatus.sendCommand(ON)
+    sendTelegram("N39DEBUG", "SpaceLever schaltet OPEN")
+    SpaceStatus.sendCommand(ON)
   }else if(SpaceLeverState.state == "closed"){
-		sendTelegram("N39DEBUG", "SpaceLever schaltet CLOSED")
-		if(SpaceLeverEnable.state==ON)
-      SpaceStatus.sendCommand(OFF)
-	}
+    sendTelegram("N39DEBUG", "SpaceLever schaltet CLOSED")
+    SpaceStatus.sendCommand(OFF)
+  }
 end

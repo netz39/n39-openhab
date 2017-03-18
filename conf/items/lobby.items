@@ -7,7 +7,6 @@ Switch LobbyRelais "Lobby Wandbeleuchtung" <light> (Lobby, Sonoff9796700, Grp_Sp
 
 Group SpaceLever (MQTT)
 String SpaceLeverState "Spacelever Status [%s]" (Lobby, SpaceLever) {mqtt="<[helium:Netz39/Things/StatusSwitch/Lever/State:state:default]"}
-Switch SpaceLeverEnable "Spacelever Aktivieren" (Lobby)
 
 Group Media (Lobby)
 Group CC "Chromecast" (Media)
