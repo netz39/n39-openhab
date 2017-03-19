@@ -2,7 +2,7 @@ var Timer timer
 
 rule "N39 opened"
 when
-	Item SpaceStatus changed from OFF to ON
+	Item SpaceStatus changed to ON
 then
 	logInfo("Logouhr", "Schalte Logouhr auf Grün")
 	sendCommand( Logouhr_RGBspd, 42 )
@@ -19,7 +19,7 @@ end
 
 rule "N39 closed"
 when
-	Item SpaceStatus changed from ON to OFF
+	Item SpaceStatusState changed to OFF
 then
 	sendCommand( Logouhr_RGBspd, 42 )
 	sendCommand( Logouhr_RGBmode, 0)
