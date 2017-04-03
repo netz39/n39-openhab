@@ -5,7 +5,7 @@ import java.text.SimpleDateFormat
 
 rule "N39 opened"
 when
-	Item SpaceStatus changed from OFF to ON
+	Item SpaceStatus changed to ON
 then
 	// Um Scharfe Kanten im Diagramm zu haben setze erstmal alte Werte erneut
 	postUpdate(SpaceStatusChartClosed, 1)
@@ -38,7 +38,7 @@ end
 
 rule "N39 closed"
 when
-	Item SpaceStatus changed from ON to OFF
+	Item SpaceStatus changed to OFF
 then
 	// Um Scharfe Kanten im Diagramm zu haben setze erstmal alte Werte erneut
 	postUpdate(SpaceStatusChartClosed, 0)
