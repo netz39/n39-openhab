@@ -1,0 +1,4 @@
+Group Sonne <sun> (Wetter)
+DateTime Sunrise_Time  "Sunrise [%1$tH:%1$tM]"  <sunrise> (Sonne)  { channel="astro:sun:home:rise#start" }
+DateTime Sunset_Time  "Sunset [%1$tH:%1$tM]"  <sunset> (Sonne) { channel="astro:sun:home:set#start" }
+Contact Nacht "Nacht [%s]" <moon> (Sonne)

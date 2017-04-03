@@ -18,6 +18,10 @@ then
 
 	postUpdate(Stat_MemberIn, 1)
 	sendCommand(Grp_SpaceStandard, ON)	// Schalte Items in der Gruppe Grp_SpaceStandard ein
+	if( Nacht.state == OPEN){
+		//Wenn nach Sonnenuntergang
+		sendCommand(Grp_SpaceStandardNight, ON)	// Schalte Items in der Gruppe Grp_SpaceStandardNight ein (Beleuchtung)
+	}
 
 	// Tweete, dass Space (wieder) offen ist
 	var SimpleDateFormat df = new SimpleDateFormat( "YYYY-MM-dd HH:mm" )

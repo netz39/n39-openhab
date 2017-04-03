@@ -1,0 +1,13 @@
+rule "Nacht Beginn"
+when
+  Channel 'astro:sun:home:eveningNight#event' triggered START
+then
+  postUpdate(Nacht, OPEN)
+end
+
+rule "Nacht Ende"
+when
+  Channel 'astro:sun:home:eveningNight#event' triggered END
+then
+  postUpdate(Nacht, CLOSED)
+end

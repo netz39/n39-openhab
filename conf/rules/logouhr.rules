@@ -19,7 +19,7 @@ end
 
 rule "N39 closed"
 when
-	Item SpaceStatusState changed to OFF
+	Item SpaceStatus changed to OFF
 then
 	sendCommand( Logouhr_RGBspd, 42 )
 	sendCommand( Logouhr_RGBmode, 0)
