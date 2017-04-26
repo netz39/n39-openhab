@@ -2,11 +2,11 @@ Group N39Logo "N39Logo" <rgb>
 
 Switch 	N39Logo_ON	    "N39Logo "             <clock>    (Lobby, Licht)  [ "homekit:Lightbulb" ]
 Switch  N39Logo_Doorblink "Logo Türblinken"    <alarm>    (N39Logo)
-Number	N39Logo_R1		  "N39Logo - Rot Out"						    (N39Logo)		{mqtt=">[mosquitto:helium/N39Logo/PWM2:command:*:default]"}
-Number	N39Logo_G1		  "N39Logo - Grün Out"					    (N39Logo)		{mqtt=">[mosquitto:helium/N39Logo/PWM3:command:*:default]"}
-Number	N39Logo_B1		  "N39Logo - Blau Out"					    (N39Logo)		{mqtt=">[mosquitto:helium/N39Logo/PWM1:command:*:default]"}
-Number	N39Logo_R2		  "N39Logo - Rot Innen"						  (N39Logo)		{mqtt=">[mosquitto:helium/N39Logo/PWM5:command:*:default]"}
-Number	N39Logo_G2		  "N39Logo - Grün Innen"					  (N39Logo)		// {mqtt=">[mosquitto:helium/N39Logo/PWM:command:*:default]"}
-Number	N39Logo_B2		  "N39Logo - Blau Innen"					  (N39Logo)		{mqtt=">[mosquitto:helium/N39Logo/PWM4:command:*:default]"}
+Number	N39Logo_R1		  "N39Logo - Rot Out"						    (N39Logo)		{mqtt=">[helium:cmnd/N39Logo/PWM2:command:*:default]"}
+Number	N39Logo_G1		  "N39Logo - Grün Out"					    (N39Logo)		{mqtt=">[helium:cmnd/N39Logo/PWM3:command:*:default]"}
+Number	N39Logo_B1		  "N39Logo - Blau Out"					    (N39Logo)		{mqtt=">[helium:cmnd/N39Logo/PWM1:command:*:default]"}
+Number	N39Logo_R2		  "N39Logo - Rot Innen"						  (N39Logo)		{mqtt=">[helium:cmnd/N39Logo/PWM5:command:*:default]"}
+Number	N39Logo_G2		  "N39Logo - Grün Innen"					  (N39Logo)		// {mqtt=">[helium:cmnd/N39Logo/PWM:command:*:default]"}
+Number	N39Logo_B2		  "N39Logo - Blau Innen"					  (N39Logo)		{mqtt=">[helium:cmnd/N39Logo/PWM4:command:*:default]"}
 
-Color  	Logouhr_RGB   	"N39Logo Farbe"		<colorlight>	  (Lobby, N39Logo)
+Color  	N39Logo_RGB   	"N39Logo Farbe"		<colorlight>	  (Lobby, N39Logo)
