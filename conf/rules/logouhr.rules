@@ -39,7 +39,7 @@ then
 		sendCommand(N39Logo_R1, 1023)
 		sendCommand(N39Logo_R2, 1023)
 	}
-	else if(Logouhr_Doorblink.state == ON){
+	else if(N39Logo_Doorblink.state == ON){
 		//TODO: Keine Ideen für eine openHAB seitige Animation momentan
 	}
 end
