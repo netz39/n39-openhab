@@ -1,12 +1,12 @@
-Group LogouhrESP "ESP Dimmer - Logouhr" <rgb>
+Group N39Logo "N39Logo" <rgb>
 
-Switch 	Logouhr_ON	"Logouhr"						<clock> (Lobby, Licht)  [ "homekit:Lightbulb" ]
-Switch  Logouhr_Doorblink "Logo Türblinken" <alarm> (LogouhrESP)
-Dimmer	Logouhr_R		  "RGB - Rot"						    (LogouhrESP)		{mqtt=">[helium:Netz39/Things/Logouhr/LED0:command:*:default]"}
-Dimmer	Logouhr_G		  "RGB - Grün"					    (LogouhrESP)		{mqtt=">[helium:Netz39/Things/Logouhr/LED2:command:*:default]"}
-Dimmer	Logouhr_B		  "RGB - Blau"					    (LogouhrESP)		{mqtt=">[helium:Netz39/Things/Logouhr/LED1:command:*:default]"}
-Dimmer	Logouhr_W1		"LogouhrRGB - White1"		  (LogouhrESP)		{mqtt=">[helium:Netz39/Things/Logouhr/LED3:command:*:default]"}
-Dimmer	Logouhr_W2		"LogouhrRGB - White2"		  (LogouhrESP)		{mqtt=">[helium:Netz39/Things/Logouhr/LED4:command:*:default]"}
-Dimmer	Logouhr_RGBmode	"RGB - Mode"					  (LogouhrESP)		{mqtt=">[helium:Netz39/Things/Logouhr/mode:command:*:default]"}
-Dimmer	Logouhr_RGBspd	"RGB - Speed"					  (LogouhrESP)		{mqtt=">[helium:Netz39/Things/Logouhr/speed:command:*:default]"}
-Color  	Logouhr_RGB   	"Logouhr Farbwahl"		<colorlight>	      (Lobby, LogouhrESP)
+Switch 	N39Logo_ON	    "N39Logo "             <clock>    (Lobby, Licht)  [ "homekit:Lightbulb" ]
+Switch  N39Logo_Doorblink "Logo Türblinken"    <alarm>    (N39Logo)
+Number	N39Logo_R1		  "N39Logo - Rot Out"						    (N39Logo)		{mqtt=">[mosquitto:helium/N39Logo/PWM2:command:*:default]"}
+Number	N39Logo_G1		  "N39Logo - Grün Out"					    (N39Logo)		{mqtt=">[mosquitto:helium/N39Logo/PWM3:command:*:default]"}
+Number	N39Logo_B1		  "N39Logo - Blau Out"					    (N39Logo)		{mqtt=">[mosquitto:helium/N39Logo/PWM1:command:*:default]"}
+Number	N39Logo_R2		  "N39Logo - Rot Innen"						  (N39Logo)		{mqtt=">[mosquitto:helium/N39Logo/PWM5:command:*:default]"}
+Number	N39Logo_G2		  "N39Logo - Grün Innen"					  (N39Logo)		// {mqtt=">[mosquitto:helium/N39Logo/PWM:command:*:default]"}
+Number	N39Logo_B2		  "N39Logo - Blau Innen"					  (N39Logo)		{mqtt=">[mosquitto:helium/N39Logo/PWM4:command:*:default]"}
+
+Color  	Logouhr_RGB   	"N39Logo Farbe"		<colorlight>	  (Lobby, N39Logo)

@@ -1,48 +1,32 @@
-var HSBType hsbValue
-var String  redValue
-var String  greenValue
-var String  blueValue
+import java.awt.Color
 
-rule "Logouhr Set RGB"
+rule "N39Logo RGB change"
 when
-        Item Logouhr_RGB received update
+  Item N39Logo_RGB changed or
+  Item N39Logo_ON changed
 then
-        hsbValue = Logouhr_RGB.state as HSBType
+	if(N39Logo_ON.state == ON){
+    var hsbValue = N39Logo_RGB.state as HSBType
 
-        redValue   = hsbValue.red.intValue.toString
-        greenValue = hsbValue.green.intValue.toString
-        blueValue  = hsbValue.blue.intValue.toString
+    var Color color = Color::getHSBColor(hsbValue.hue.floatValue / 360, hsbValue.saturation.floatValue / 100, hsbValue.brightness.floatValue / 100)
 
-	if(Logouhr_ON.state == ON){
-        sendCommand( Logouhr_R, redValue )
-        sendCommand( Logouhr_G, greenValue)
-        sendCommand( Logouhr_B, blueValue )
-	}
-	else{
-        sendCommand( Logouhr_R, 0 )
-        sendCommand( Logouhr_G, 0 )
-        sendCommand( Logouhr_B, 0 )
-    }
-end
+    var redValue = (color.red.floatValue * 4).intValue
+    var greenValue = (color.green.floatValue * 4).intValue
+    var blueValue = (color.blue.floatValue * 4).intValue
 
-rule "Logouhr RGB ON"
-when
-        Item Logouhr_ON received update
-then
-	if(Logouhr_ON.state == ON){
-        hsbValue = Logouhr_RGB.state as HSBType
-
-        redValue   = hsbValue.red.intValue.toString
-        greenValue = hsbValue.green.intValue.toString
-        blueValue  = hsbValue.blue.intValue.toString
-
-        sendCommand( Logouhr_R, redValue )
-        sendCommand( Logouhr_G, greenValue)
-        sendCommand( Logouhr_B, blueValue )
-    }
-    else{
-        sendCommand( Logouhr_R, 0 )
-        sendCommand( Logouhr_G, 0 )
-        sendCommand( Logouhr_B, 0 )
-    }
+    sendCommand(N39Logo_R1, redValue)
+    sendCommand(N39Logo_G1, greenValue)
+    sendCommand(N39Logo_B1, blueValue)
+    sendCommand(N39Logo_R2, redValue)
+    sendCommand(N39Logo_G2, greenValue)
+    sendCommand(N39Logo_B2, blueValue)
+  }
+  else{
+    sendCommand(N39Logo_R1, 0)
+    sendCommand(N39Logo_G1, 0)
+    sendCommand(N39Logo_B1, 0)
+    sendCommand(N39Logo_R2, 0)
+    sendCommand(N39Logo_G2, 0)
+    sendCommand(N39Logo_B2, 0)
+  }
 end
