@@ -10,8 +10,8 @@ sitemap _default label="N39 openhab" {
           Slider item=Kodi_Volume icon=soundvolume
         }
         Frame label="Beleuchtung" {
-          Switch item=Logouhr_ON
-          Colorpicker item=Logouhr_RGB
+          Switch item=N39Logo_ON
+          Colorpicker item=N39Logo_RGB
           Switch item=LobbyRelais
         }
         Frame label="Chromecast" {
