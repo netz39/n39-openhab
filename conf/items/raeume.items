@@ -6,6 +6,7 @@ Group Bd "Bad"
 
 Group MQTT "MQTT"
 
-Group:Switch:OR(ON,OFF) Grp_SpaceStandard "Space Standard Devices" // Gruppe von Dingen, die beim öffnen des Spaces angeschaltet werden
-Group:Switch:OR(ON,OFF) Grp_SpaceShutdown "Space Shutdown Devices" // Gruppe von Dingen, die bei verlassen des Spaces ausgeschaltet werden
+Group:Switch:OR(ON,OFF) Grp_SpaceStandard "SpaceOpen Standard ON Devices" // Gruppe von Dingen, die beim öffnen des Spaces angeschaltet werden
+Group:Switch:OR(ON,OFF) Grp_SpaceShutdown "SpaceClosed Shutdown Devices" // Gruppe von Dingen, die bei verlassen des Spaces ausgeschaltet werden
+Group:Switch:OR(ON,OFF) Grp_SpaceStandardNight "SpaceOpen Night Standard ON Devices" // Gruppe von Dingen, die beim Öffnen des Spaces nach Sonnenuntergang angeschaltet werden
 Group Grp_CinemaOff
