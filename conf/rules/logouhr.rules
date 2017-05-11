@@ -4,22 +4,22 @@ rule "N39 opened"
 when
 	Item SpaceStatus changed to ON
 then
-	if(N39Logo_ON.state == OFF){
-		logInfo("Logouhr", "Schalte Logouhr auf Grün")
-		sendCommand(N39Logo_G1, 1023 )
-		sendCommand(N39Logo_G2, 1023 )
-		timer = createTimer(now.plusSeconds(30)) [|
-			//Schalte Logouhr an mit hinterlegtem Farbwert
-			logInfo("Logouhr", "Schalte Logouhr auf hinterlegten Farbwert")
-			sendCommand( N39Logo_ON, ON)
-		]
-	}
+	sendCommand( N39Logo_ON, OFF)
+	logInfo("Logouhr", "Schalte Logouhr auf Grün")
+	sendCommand(N39Logo_G1, 1023 )
+	sendCommand(N39Logo_G2, 1023 )
+	sendCommand(N39Logo_Notification, ON )
+	timer = createTimer(now.plusSeconds(30)) [|			//Schalte Logouhr an mit hinterlegtem Farbwert
+		logInfo("Logouhr", "Schalte Logouhr auf hinterlegten Farbwert")
+		sendCommand( N39Logo_ON, ON)
+	]
 end
 
 rule "N39 closed"
 when
 	Item SpaceStatus changed to OFF
 then
+	sendCommand( N39Logo_ON, ON)
 	sendCommand(N39Logo_R1, 1023)
 	sendCommand(N39Logo_G1, 0)
 	sendCommand(N39Logo_B1, 0)
@@ -49,6 +49,7 @@ when
 	Item Door changed from OPEN to CLOSED
 then
 	if(SpaceStatus.state == OFF){
+		//Tür fällt ins Schloss und Spacestatus ist zu? -> Logo aus!
 		sendCommand( N39Logo_ON, OFF)
 	}
 end

@@ -11,4 +11,5 @@ Number	N39Logo_B2		  "N39Logo - Blau Innen"					  (N39Logo)		{mqtt=">[helium:cmn
 
 Color  	N39Logo_RGB   	"N39Logo Farbe"		<colorlight>	  (Lobby, N39Logo)
 
-Switch N39Logo_BlinkRed "N39Logo - Logouhr blink"	{ channel="exec:command:logouhr_blink:run"}
+Switch N39Logo_Notification20 "20s Notification Blink"	{ channel="exec:command:logoblink20:run"}
+Switch N39Logo_Notification5 "5s Notification Blink"	{ channel="exec:command:logoblink5:run"}
