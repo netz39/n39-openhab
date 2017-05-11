@@ -10,3 +10,5 @@ Number	N39Logo_G2		  "N39Logo - Grün Innen"					  (N39Logo)		// {mqtt=">[helium
 Number	N39Logo_B2		  "N39Logo - Blau Innen"					  (N39Logo)		{mqtt=">[helium:cmnd/n39logo/PWM4:command:*:default]"}
 
 Color  	N39Logo_RGB   	"N39Logo Farbe"		<colorlight>	  (Lobby, N39Logo)
+
+Switch N39Logo_BlinkRed "N39Logo - Logouhr blink"	{ channel="exec:command:logouhr_blink:run"}

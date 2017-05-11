@@ -1,0 +1,1 @@
+Thing exec:command:logouhr_blink [command="/srv/openhab/conf/scripts/logouhr_blink.sh 20"]

@@ -13,6 +13,7 @@ sitemap _default label="N39 openhab" {
           Switch item=N39Logo_ON
           Colorpicker item=N39Logo_RGB
           Switch item=LobbyRelais
+          Switch item=N39Logo_BlinkRed
         }
         Frame label="Chromecast" {
           Default item=CC_Music
