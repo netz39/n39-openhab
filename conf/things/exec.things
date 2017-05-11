@@ -1,2 +1,3 @@
-Thing exec:command:logoblink20 [command="/srv/openhab/conf/scripts/logouhr_blink.sh 20", autorun=false,interval=0]
-Thing exec:command:logoblink5 [command="/srv/openhab/conf/scripts/logouhr_blink.sh 5", autorun=false,interval=0]
+Thing exec:command:logoblink20 [command="/srv/openhab/conf/scripts/logouhr_blink.sh 20", autorun=false, interval=0]
+Thing exec:command:logoblink10 [command="/srv/openhab/conf/scripts/logouhr_blink.sh 10", autorun=false, interval=0]
+Thing exec:command:logoblink5 [command="/srv/openhab/conf/scripts/logouhr_blink.sh 5", autorun=false, interval=0]
