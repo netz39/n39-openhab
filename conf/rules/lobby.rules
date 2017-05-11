@@ -1,0 +1,12 @@
+rule "Lobby Wandbeleuchtung Toggle"
+when
+	Item LobbyRelais_Toggle changed to ON
+then
+	if (LobbyRelais.state!=ON)      // item OFF or uninitialized
+    LobbyRelais.sendCommand(ON)
+  else
+    LobbyRelais.sendCommand(OFF)
+
+  //Setze Toggle Switch wieder auf OFF
+  LobbyRelais_Toggle.sendCommand(OFF)
+end
