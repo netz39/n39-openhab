@@ -1,0 +1,18 @@
+import java.util.concurrent.ThreadLocalRandom;
+
+rule "Random Greeting"
+when
+	Item Door changed from CLOSED to OPEN
+then
+	//say("This is the netz39 Mission Controll. Front door closed. Have a nive hacky day!")
+	//say("Servus! Netz39 ohpehnhab ist online.  ")
+	//say("Hallo und willkommen im Netz 39! Hier in der Lobby hat es gerade 23 Komma 7 Grad! Kuschlig Warm also schnapp dir eine Mate und chill ein bisschen!")
+	
+	//say("Willkommen im Netz39. Hier hat es gerade "+LobbyTemp.state+" Grad.")
+	switch ThreadLocalRandom::current().nextInt(0, 3+ 1): {
+            case 0: say("Willkommen im Netz39! Es sind gerade ".Stat_MemberIn." Mitglieder anwesend!")
+            case 1: say("Schliesse das Tor. Es zieht!")
+            case 2: say("Eingang geoeffnet. Lade Willkommenssequenz.")
+            case 3: say("Komm herein. Hier hat es kuschlige "+LobbyTemp.state+" Grad.")
+        }
+end
