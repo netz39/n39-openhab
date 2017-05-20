@@ -1,3 +1,3 @@
 Group Hs "Hackstube" <energy>
 
-Number HsTemp "Hackstube Temperatur [%.1f °C]" <temperature> (Hs) // {mqtt="<[helium:/Lobby/Sonoff9796700/Temperature:state:default]"}
+Number HsTemp "Hackstube Temperatur [%.1f °C]" <temperature> (Hs) // {mqtt="<[helium:/Users/tux/TmpSnsr/State:state:default]"}
