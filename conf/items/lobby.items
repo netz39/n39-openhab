@@ -6,6 +6,10 @@ Number LobbyButton "Lobby Button" (Lobby, Sonoff9796700) {mqtt="<[helium:/Lobby/
 Switch LobbyRelais "Lobby Wandbeleuchtung" <light> (Lobby, Sonoff9796700, Grp_SpaceShutdown) {mqtt=">[helium:/Lobby/Sonoff9796700/Relais:command:*:default]"}
 Switch LobbyRelais_Toggle "Lobby Wandbeleuchtung Toggle" //Dieser virtuelle Switch toggelt die Lobbybeleuchtung
 
+Group SonoffLobbyUV (MQTT)
+Switch LobbyUVRelais "Lobby Schwarzlicht" <light> (Lobby, SonoffLobbyUV, Grp_SpaceShutdown) {mqtt=">[helium:cmnd/N39Lobby/UV/POWER:command:*:default]"}
+Switch LobbyUVRelais_Toggle "Lobby Schwarzlicht Toggle"
+
 Group SpaceLever (MQTT)
 String SpaceLeverState "Spacelever Status [%s]" (Lobby, SpaceLever) {mqtt="<[helium:Netz39/Things/StatusSwitch/Lever/State:state:default]"}
 
