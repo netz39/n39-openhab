@@ -13,6 +13,8 @@ then
 		logInfo("Logouhr", "Schalte Logouhr auf hinterlegten Farbwert")
 		sendCommand( N39Logo_ON, ON)
 	]
+	// Logouhr einschalten
+        Logouhr_ON.sendCommand(ON)
 end
 
 rule "Logouhr N39 closed"
