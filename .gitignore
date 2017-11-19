@@ -7,3 +7,5 @@ start.sh
 addons/
 userdata/
 runtime/
+
+.DS_Store
