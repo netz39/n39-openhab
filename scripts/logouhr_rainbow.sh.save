@@ -1,0 +1,20 @@
+#!/bin/bash
+         COUNTER=$1
+	 NOCOL="\e[39m"
+         RED="\e[31m"
+         array=(1 2 3 4 5)
+         until [  $COUNTER -lt 0 ]; do
+             sleep 0.1
+             VAL=$(( RANDOM % 1024  ))
+             for ch in "${array[@]}"
+             do
+                until [  $val -eq 0 ]; do
+                mosquitto_pub -t cmnd/n39logo/PWM$i -m $(( RANDOM % 1024  ))
+                let VAL-=sign(ch)
+             done
+             let COUNTER-=1
+         done
+
+function sign($n) {
+    return ($n > 0) - ($n < 0);
+}
