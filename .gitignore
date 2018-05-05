@@ -9,3 +9,6 @@ userdata/
 runtime/
 
 .DS_Store
+
+conf/
+sounds/
