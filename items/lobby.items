@@ -1,14 +1,14 @@
-Group Lobby "Lobby" <sofa> (All)
+Group Lobby "Lounge" <sofa> (All)
 
 Group Sonoff9796700 (MQTT)
 Number LobbyTemp "Lobby Temperatur [%.1f °C]" <temperature> (Lobby, Sonoff9796700) {mqtt="<[helium:/Lobby/Sonoff9796700/Temperature:state:default]"}
-Number LobbyButton "Lobby Button" (Lobby, Sonoff9796700) {mqtt="<[helium:/Lobby/Sonoff9796700/Button:state:default]"}
-Switch LobbyRelais "Lobby Wandbeleuchtung" <light> (Lobby, Sonoff9796700, Grp_SpaceShutdown) {mqtt=">[helium:/Lobby/Sonoff9796700/Relais:command:*:default]"}
+Number LobbyButton "Lounge Button" (Lobby, Sonoff9796700) {mqtt="<[helium:/Lobby/Sonoff9796700/Button:state:default]"}
+Switch LobbyRelais "Lounge Wandbeleuchtung" <light> (Lobby, Sonoff9796700, Grp_SpaceShutdown) {mqtt=">[helium:/Lobby/Sonoff9796700/Relais:command:*:default]"}
 Switch LobbyRelais_Toggle "Lobby Wandbeleuchtung Toggle" //Dieser virtuelle Switch toggelt die Lobbybeleuchtung
 
 Group SonoffLobbyUV (MQTT)
-Switch LobbyUVRelais "Lobby Schwarzlicht" <light> (Lobby, SonoffLobbyUV, Grp_SpaceShutdown) {mqtt=">[helium:cmnd/N39LobbyUV/POWER:command:*:default]"}
-Switch LobbyUVRelais_Toggle "Lobby Schwarzlicht Toggle"
+Switch LobbyUVRelais "Lounge Schwarzlicht" <light> (Lobby, SonoffLobbyUV, Grp_SpaceShutdown) {mqtt=">[helium:cmnd/N39LobbyUV/POWER:command:*:default]"}
+Switch LobbyUVRelais_Toggle "Lounge Schwarzlicht Toggle"
 
 Group SpaceLever (MQTT)
 String SpaceLeverState "Spacelever Status [%s]" (Lobby, SpaceLever) {mqtt="<[helium:Netz39/Things/StatusSwitch/Lever/State:state:default]"}

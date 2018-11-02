@@ -1,4 +1,4 @@
-// Das hier ist die Item-Konfiguration für den KODI in der Lobby
+// Das hier ist die Item-Konfiguration für den KODI in der Lounge
 // weitere Infos zum KODI-Binding gibt es neben der openHab Doku auch hier: https://github.com/openhab/openhab2-addons/tree/master/addons/binding/org.openhab.binding.kodi
 
 Group KODI (All)
