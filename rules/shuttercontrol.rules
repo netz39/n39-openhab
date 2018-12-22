@@ -4,5 +4,5 @@ when
 then
         // Emulate sonoff button press,
         // so all special behaviour can go there
-        postUpdate(ShuttercontrolBtn, 1)
+        LobbyButton.postUpdate(1)
 end
