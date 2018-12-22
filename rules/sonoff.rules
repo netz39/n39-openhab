@@ -1,4 +1,4 @@
-rule "Lobby (Sonoff9796700) Buttons"
+rule "Lounge (Sonoff9796700) Buttons"
 when
 	Item LobbyButton changed
 then

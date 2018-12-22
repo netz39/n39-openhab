@@ -1,4 +1,4 @@
-rule "Lobby Wandbeleuchtung Toggle"
+rule "Lounge Wandbeleuchtung Toggle"
 when
 	Item LobbyRelais_Toggle changed to ON
 then
