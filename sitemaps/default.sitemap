@@ -1,4 +1,4 @@
-sitemap _default label="N39 openhab" {
+sitemap default label="N39 openhab" {
     Frame label="Areas" {
       Group item=Lobby {
         Frame label="Klima" {
