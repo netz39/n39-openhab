@@ -1,8 +1,0 @@
-rule "Shuttercontrol triggers Lounge Light"
-when
-        Item ShuttercontrolBtn received update
-then
-        // Emulate sonoff button press,
-        // so all special behaviour can go there
-        LobbyButton.postUpdate(1)
-end
