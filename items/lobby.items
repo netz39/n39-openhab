@@ -1,7 +1,6 @@
 Group Lobby "Lounge" <sofa> (All)
 
 Group Sonoff9796700 (MQTT)
-Number LobbyButton "Lounge Button" (Lobby, Sonoff9796700) {mqtt="<[helium:/Lobby/Sonoff9796700/Button:state:default]"}
 Switch LobbyRelais "Lounge Wandbeleuchtung" <light> (Lobby, SonoffLoungeAmbient, Grp_SpaceShutdown) {mqtt=">[helium:cmnd/N39LoungeAmbient/POWER:command:*:default]"}
 Switch LobbyRelais_Toggle "Lobby Wandbeleuchtung Toggle" //Dieser virtuelle Switch toggelt die Lobbybeleuchtung
 
