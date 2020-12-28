@@ -1,0 +1,7 @@
+Bridge mqtt:broker:N39 [host="mqtt.n39.eu", secure=false] {
+  Thing topic sonoff_BastelUSB  "USB Power" @ "Bastelbereich" {
+    Channels:
+      Type switch: PowerSwitch [stateTopic="stat/BastelUSB/POWER", commandTopic="cmnd/BastelUSB/POWER", postCommand=true]
+      Type string: IPAddress   [stateTopic="stat/BastelUSB/STATUS5", transformationPattern="JSONPATH:$.StatusNET.IPAddress"]
+  }
+}
