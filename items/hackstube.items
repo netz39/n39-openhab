@@ -1,3 +1,5 @@
 Group Hs "Bastelbereich" <energy>
 
 Number HsTemp "Bastelbereich Temperatur [%.1f °C]" <temperature> (Hs) {mqtt="<[helium:/Users/tux/TmpSnsr/State:state:JS(withoutc.js)]"}
+
+Switch UsbCharger "USB Charger" (Hs) {channel="mqtt:topic:N39:sonoff_BastelUSB:PowerSwitch"}

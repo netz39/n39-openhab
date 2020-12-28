@@ -28,6 +28,9 @@ sitemap default label="N39 openhab" {
           Switch item=on_laserjet
           Switch item=on_labelprinter
         }
+        Frame label="Basteltisch" {
+          Switch item=UsbCharger
+        }
       }
     }
     Frame label="Rolladen"{
