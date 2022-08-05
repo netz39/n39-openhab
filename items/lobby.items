@@ -1,9 +1,5 @@
 Group Lobby "Lounge" <sofa> (All)
 
-Group Sonoff9796700 (MQTT)
-Switch LobbyRelais "Lounge Wandbeleuchtung" <light> (Lobby, SonoffLoungeAmbient, Grp_SpaceShutdown) {mqtt=">[helium:cmnd/N39LoungeAmbient/POWER:command:*:default]"}
-Switch LobbyRelais_Toggle "Lobby Wandbeleuchtung Toggle" //Dieser virtuelle Switch toggelt die Lobbybeleuchtung
-
 Group SonoffLobbyUV (MQTT)
 Switch LobbyUVRelais "Lounge Schwarzlicht" <light> (Lobby, SonoffLobbyUV, Grp_SpaceShutdown) {mqtt=">[helium:cmnd/N39LobbyUV/POWER:command:*:default]"}
 Switch LobbyUVRelais_Toggle "Lounge Schwarzlicht Toggle"
@@ -18,5 +14,3 @@ Switch Stereo_Hauptschalter "Stereo - Hauptschalter" (Media, Grp_SpaceShutdown) 
 
 Dimmer CC_Volume "Chromecast Volume" (Media, CC)
 Player CC_Music "Chromecast Music" <player> (Media, CC)
-
-String ShuttercontrolBtn "Shutter Light Button" <light> (Lobby) {mqtt="<[helium:Netz39/Things/Shuttercontrol/Button/Events:command:default]"}
