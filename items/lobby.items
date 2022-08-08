@@ -1,9 +1,5 @@
 Group Lobby "Lounge" <sofa> (All)
 
-Group SonoffLobbyUV (MQTT)
-Switch LobbyUVRelais "Lounge Schwarzlicht" <light> (Lobby, SonoffLobbyUV, Grp_SpaceShutdown) {mqtt=">[helium:cmnd/N39LobbyUV/POWER:command:*:default]"}
-Switch LobbyUVRelais_Toggle "Lounge Schwarzlicht Toggle"
-
 Group SpaceLever (MQTT)
 String SpaceLeverState "Spacelever Status [%s]" (Lobby, SpaceLever) {mqtt="<[helium:Netz39/Things/StatusSwitch/Lever/State:state:default]"}
 
