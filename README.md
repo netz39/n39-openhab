@@ -1,5 +1,9 @@
 # n39-openhab
-Dieses Repository beingaltet den "conf"-Ordner des openhab-Spiel-Test-Bastelknotens im Netz39. Auf diesem Knoten läuft die openHAB 2 Beta zum herumspielen und testen auf netz39-Kompatibilität.
+
+:fire: **Dieses System wurde abgelöst!**
+Beachtet bitte, dass wir OpenHab nicht mehr einsetzen und diese Konfiguration nicht mehr aktuell ist!
+
+Dieses Repository beinhaltet den "conf"-Ordner des openhab-Spiel-Test-Bastelknotens im Netz39. Auf diesem Knoten läuft die openHAB 2 Beta zum herumspielen und testen auf netz39-Kompatibilität.
 
 ## Bedienoberfläche
 Endnutzer können im Netz39-WLAN können auf openhab über die Basic-UI zugreifen: (http://odroid64.n39.eu:8080/) 
